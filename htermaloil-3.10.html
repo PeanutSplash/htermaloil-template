@@ -1476,7 +1476,7 @@
 
                 // 表单验证消息
                 'form-validation-error': 'Please enter your name and contact phone number',
-                'form-success-message': 'Your inquiry has been submitted. Our green technology consultant will contact you shortly!',
+                'form-success-message': 'Email client has been opened with pre-filled inquiry template. Please send the email to complete your inquiry!',
 
                 // 油品对比
                 'oil-comparison-title': 'Oil Appearance Before & After Retrofit',
@@ -1614,7 +1614,7 @@
 
                 // 表单验证消息
                 'form-validation-error': 'Пожалуйста, введите ваше имя и контактный телефон',
-                'form-success-message': 'Ваш запрос отправлен. Наш консультант по зеленым технологиям свяжется с вами в ближайшее время!',
+                'form-success-message': 'Почтовый клиент открыт с предзаполненным шаблоном запроса. Пожалуйста, отправьте письмо для завершения запроса!',
 
                 // 油品对比
                 'oil-comparison-title': 'Внешний вид масла до и после модернизации',
@@ -1795,13 +1795,15 @@
                 }
             });
             
-            // 表单提交处理
+            // 表单提交处理 - 修改为唤起邮件客户端
             const contactForm = document.querySelector('form');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const name = document.getElementById('name').value;
                     const phone = document.getElementById('phone').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
 
                     if (!name || !phone) {
                         const errorMsg = translations[currentLanguage]['form-validation-error'] || 'Please enter your name and contact phone number';
@@ -1809,8 +1811,36 @@
                         return;
                     }
 
-                    const successMsg = translations[currentLanguage]['form-success-message'] || 'Your inquiry has been submitted. Our green technology consultant will contact you shortly!';
+                    // 构建邮件内容模板
+                    const emailSubject = encodeURIComponent('Heat Transfer Oil System Retrofit Solution Inquiry');
+                    const emailBody = encodeURIComponent(`Dear Heat Transfer Oil Solutions Team,
+
+I am interested in your Heat Transfer Oil System Retrofit Solution and would like to request more information.
+
+Contact Information:
+- Name: ${name}
+- Phone: ${phone}
+- Email: ${email || 'Not provided'}
+
+Requirements:
+${message || 'Please provide detailed information about your heat transfer oil system retrofit solution, including technical specifications, pricing, and implementation timeline.'}
+
+I look forward to hearing from you soon.
+
+Best regards,
+${name}`);
+
+                    // 构建mailto链接
+                    const mailtoLink = `mailto:Peter.choy.wong@outlook.com?subject=${emailSubject}&body=${emailBody}`;
+
+                    // 唤起邮件客户端
+                    window.location.href = mailtoLink;
+
+                    // 显示提示信息
+                    const successMsg = translations[currentLanguage]['form-success-message'] || 'Email client has been opened. Please send the email to complete your inquiry!';
                     alert(successMsg);
+
+                    // 重置表单
                     contactForm.reset();
                 });
             }
