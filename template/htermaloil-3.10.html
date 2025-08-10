@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Lifetime Maintenance-Free Heat Transfer Oil System Retrofit Solution</title>
+    
+    <!-- 社交媒体分享元标签 -->
+    <meta property="og:title" content="Lifetime Maintenance-Free Heat Transfer Oil System">
+    <meta property="og:description" content="Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs.">
+    <meta property="og:image" content="http://www.gzjds.top/oil/images/oil1.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="315">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com">
+    
+    <!-- Twitter 特定标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lifetime Maintenance-Free Heat Transfer Oil System">
+    <meta name="twitter:description" content="Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs.">
+    <meta name="twitter:image" content="http://www.gzjds.top/oil/images/oil1.jpg">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- 配置Tailwind自定义主题 - 绿色环保风格 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2e7d32',
+                        secondary: '#43a047',
+                        accent: '#81c784',
+                        accentDark: '#558b2f',
+                        lightGreen: '#e8f5e9',
+                        lightGray: '#f5f7fa',
+                        danger: '#d32f2f',
+                        success: '#388e3c'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    },
+                    lineHeight: {
+                        'tight': '1.2',
+                        'normal': '1.3',
+                        'relaxed': '1.5',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            }
+            .bg-gradient-primary {
+                background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+            }
+            .bg-gradient-accent {
+                background: linear-gradient(135deg, #81c784 0%, #558b2f 100%);
+            }
+            .section-fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .section-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .comparison-card {
+                transition: all 0.3s ease;
+            }
+            .comparison-card:hover {
+                transform: translateY(-5px);
+            }
+            .table-responsive {
+                overflow-x: auto;
+                position: relative;
+                touch-action: pan-x;
+            }
+            .scroll-indicator {
+                display: none;
+                position: absolute;
+                right: 10px;
+                top: 90%;
+                transform: translateY(-50%);
+                background-color: rgba(46, 125, 50, 0.3);
+                color: rgba(255, 255, 255, 0.8);
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                z-index: 10;
+                animation: pulse 2s infinite;
+                align-items: center;
+            }
+            @keyframes pulse {
+                0% { opacity: 0.7; }
+                50% { opacity: 1; }
+                100% { opacity: 0.7; }
+            }
+            @media (max-width: 768px) {
+                .scroll-indicator {
+                    display: flex;
+                }
+            }
+            
+            /* 表格紧凑样式 */
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+            }
+            table tr {
+                line-height: 1.2;
+                margin: 0;
+                padding: 0;
+            }
+            table td, table th {
+                padding: 0.3rem 0.5rem;
+                margin: 0;
+                border: 1px solid #e2e8f0;
+            }
+            table thead tr {
+                background-color: #2e7d32;
+                color: white;
+            }
+            table tbody tr:nth-child(even) {
+                background-color: #f8fafc;
+            }
+            table tbody tr:hover {
+                background-color: #e8f5e9;
+            }
+            
+            /* 客户LOGO展示 */
+            .client-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 20px;
+                place-items: center;
+            }
+            .client-logo {
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+            .client-logo:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+            .client-logo img {
+                max-height: 60px;
+                max-width: 140px;
+                object-fit: contain;
+            }
+            
+            /* 案例卡片 */
+            .case-card {
+                background: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                height: 100%;
+            }
+            .case-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
+            .case-header {
+                padding: 15px 20px;
+                background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+                color: white;
+                font-weight: bold;
+            }
+            .case-body {
+                padding: 20px;
+            }
+            .case-stats {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+                flex-wrap: wrap;
+            }
+            .stat-item {
+                background: #e8f5e9;
+                border-radius: 6px;
+                padding: 8px 12px;
+                text-align: center;
+                min-width: 120px;
+                margin: 5px;
+                flex-grow: 1;
+            }
+            .stat-value {
+                font-weight: bold;
+                font-size: 1.2rem;
+                color: #2e7d32;
+            }
+            .stat-label {
+                font-size: 0.85rem;
+                color: #666;
+            }
+            
+            /* 碳足迹展示 */
+            .carbon-footprint {
+                background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+                border-radius: 12px;
+                padding: 25px;
+                color: white;
+                text-align: center;
+                margin: 30px 0;
+            }
+            .footprint-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footprint-stats {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .footprint-stat {
+                padding: 15px;
+            }
+            .footprint-value {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.3;
+            background-color: #f0f9f1;
+            background-image: linear-gradient(to bottom, #f0f9f1 0%, #e8f5e9 100%);
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .fa {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+        .improvement-arrow {
+            display: inline-block;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+        .improvement-up {
+            background-color: rgba(81, 207, 102, 0.2);
+            color: #2e7d32;
+        }
+        .improvement-down {
+            background-color: rgba(81, 207, 102, 0.2);
+            color: #2e7d32;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+        }
+        p {
+            margin-bottom: 0.6rem;
+        }
+        .section {
+            margin-bottom: 1.2rem;
+        }
+        .benefit-card, .step, .stat-card {
+            padding: 0.8rem;
+        }
+
+        /* 联系表单输入文字颜色修改 */
+        #contact input, 
+        #contact textarea {
+            color: #000 !important;
+        }
+        #contact input::placeholder,
+        #contact textarea::placeholder {
+            color: #666 !important;
+            opacity: 1;
+        }
+        
+        /* 低碳效果展示 */
+        .eco-impact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .eco-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        .eco-icon i {
+            font-size: 2rem;
+            color: #2e7d32;
+        }
+        .eco-content {
+            flex-grow: 1;
+        }
+        
+        /* 新增：优化移动端卡片样式 */
+        .purpose-card {
+            padding: 12px;
+            height: 100%;
+            text-align: center;
+        }
+        .purpose-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 8px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .purpose-icon i {
+            font-size: 1.5rem;
+            color: #2e7d32;
+        }
+        .purpose-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .purpose-text {
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+        
+        /* 环保效益卡片优化 */
+        .eco-card {
+            height: 100%;
+            padding: 16px;
+            text-align: center;
+        }
+        .eco-card-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .eco-card-icon i {
+            font-size: 1.8rem;
+            color: #2e7d32;
+        }
+        .eco-card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .eco-card-text {
+            font-size: 0.85rem;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        .eco-card-value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2e7d32;
+        }
+        
+        /* 案例卡片优化 */
+        .case-card-mobile {
+            margin-bottom: 20px;
+        }
+        .case-header-mobile {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px 8px 0 0;
+        }
+        .case-body-mobile {
+            padding: 16px;
+            background: white;
+            border-radius: 0 0 8px 8px;
+        }
+        .case-stats-mobile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .stat-item-mobile {
+            background: #e8f5e9;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+        }
+        .stat-value-mobile {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2e7d32;
+        }
+        .stat-label-mobile {
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800 font-sans leading-tight">
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-primary/95 text-white shadow-md z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-leaf text-accent text-xl"></i>
+                <span class="font-bold text-lg">Heat Transfer Oil Solutions</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#purpose" class="hover:text-accent transition-colors">Solution Purpose</a>
+                <a href="#technology" class="hover:text-accent transition-colors">Technology</a>
+                <a href="#economic" class="hover:text-accent transition-colors">Economic Benefits</a>
+                <a href="#cases" class="hover:text-accent transition-colors">Case Studies</a>
+                <a href="#environmental" class="hover:text-accent transition-colors">Environmental Impact</a>
+                <a href="#implementation" class="hover:text-accent transition-colors">Implementation</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact Us</a>
+            </div>
+            <button class="md:hidden text-white" id="menuToggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-primary/95 w-full" id="mobileMenu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#purpose" class="py-2 hover:text-accent transition-colors">Solution Purpose</a>
+                <a href="#technology" class="py-2 hover:text-accent transition-colors">Technology</a>
+                <a href="#economic" class="py-2 hover:text-accent transition-colors">Economic Benefits</a>
+                <a href="#cases" class="py-2 hover:text-accent transition-colors">Case Studies</a>
+                <a href="#environmental" class="py-2 hover:text-accent transition-colors">Environmental Impact</a>
+                <a href="#implementation" class="py-2 hover:text-accent transition-colors">Implementation</a>
+                <a href="#contact" class="py-2 hover:text-accent transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="bg-gradient-primary text-white pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+            <div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 rounded-full bg-white/30"></div>
+            <div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 rounded-full bg-white/20"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6 text-shadow leading-tight">
+                    Heat Transfer Oil System Retrofit Solution
+                </h1>
+                <div class="text-[clamp(1.2rem,3vw,1.6rem)] font-semibold mb-8 text-accent">
+                    Online Restoration · Lifetime Maintenance-Free
+                </div>
+                <div class="bg-accent text-primary font-bold py-3 px-8 rounded-full inline-block text-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <i class="fas fa-leaf mr-2"></i>Solve Heat Transfer Oil Aging Issues Permanently
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- 方案目的 -->
+        <section id="purpose" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
+            <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
+                <i class="fas fa-bullseye bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
+                Solution Purpose
+            </h2>
+            <p class="text-lg mb-4 leading-tight">
+                Achieve "online restoration," "lifetime maintenance-free operation," and "continuous compliance with standards" for heat transfer systems, fundamentally solving safety, energy consumption, and environmental issues caused by oil aging.
+            </p>
+            
+            <!-- 优化为2×2网格布局 -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-lightGreen rounded-lg purpose-card">
+                    <div class="purpose-icon">
+                        <i class="fas fa-sync-alt text-primary"></i>
+                    </div>
+                    <h3 class="purpose-title text-primary">Online Restoration</h3>
+                    <p class="purpose-text">Achieve purification without production interruption</p>
+                </div>
+                
+                <div class="bg-lightGreen rounded-lg purpose-card">
+                    <div class="purpose-icon">
+                        <i class="fas fa-recycle text-primary"></i>
+                    </div>
+                    <h3 class="purpose-title text-primary">Lifetime Maintenance-Free</h3>
+                    <p class="purpose-text">Balance degradation byproducts, eliminate oil changes</p>
+                </div>
+                
+                <div class="bg-lightGreen rounded-lg purpose-card">
+                    <div class="purpose-icon">
+                        <i class="fas fa-seedling text-primary"></i>
+                    </div>
+                    <h3 class="purpose-title text-primary">Energy Savings</h3>
+                    <p class="purpose-text">Improve thermal efficiency, reduce energy consumption</p>
+                </div>
+                
+                <div class="bg-lightGreen rounded-lg purpose-card">
+                    <div class="purpose-icon">
+                        <i class="fas fa-check-circle text-primary"></i>
+                    </div>
+                    <h3 class="purpose-title text-primary">Continuous Compliance</h3>
+                    <p class="purpose-text">Maintain oil quality standards consistently</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 技术方案 -->
+        <section id="technology" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
+            <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
+                <i class="fas fa-tools bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
+                Green Technology Solution
+            </h2>
+            <p class="text-lg mb-2"><span class="font-semibold">Core Advantages:</span> 【Low Emission | Low Energy Consumption | Physical Process | Circular Economy】</p>
+            
+            <div class="mt-6 space-y-4">
+                <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
+                    <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                    <h3 class="text-xl font-bold text-primary mb-1">Deacidification & Degumming</h3>
+                    <p class="text-sm">Effectively removes gums, asphaltenes, and acidic contaminants to prevent coking and extend equipment life.</p>
+                </div>
+                
+                <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
+                    <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                    <h3 class="text-xl font-bold text-primary mb-1">Online Light Fraction Removal</h3>
+                    <p class="text-sm">Removes light fractions without shutdown, improving flash point and heat transfer while preventing vapor lock and cavitation.</p>
+                </div>
+                
+                <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
+                    <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                    <h3 class="text-xl font-bold text-primary mb-1">Physical Purification Technology</h3>
+                    <p class="text-sm">Utilizes flocculation adsorption and separation technology with minimal oil loss.</p>
+                </div>
+                
+                <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
+                    <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                    <h3 class="text-xl font-bold text-primary mb-1">Circular Economy Model</h3>
+                    <p class="text-sm">Restored oil exceeds national standards, achieving resource circularity.</p>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-primary mb-4 text-center">Technical Performance Comparison</h3>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm table-responsive" id="techTable">
+                    <div class="scroll-indicator">
+                        <i class="fas fa-arrow-left mr-1"></i> Scroll horizontally
+                    </div>
+                    <table class="w-full text-left min-w-[640px] text-sm">
+                        <thead>
+                            <tr>
+                                <th class="py-1 px-2 rounded-tl-lg">Parameter</th>
+                                <th class="py-1 px-2">Original Oil</th>
+                                <th class="py-1 px-2">After Deacidification</th>
+                                <th class="py-1 px-2">After Light Fraction Removal</th>
+                                <th class="py-1 px-2 rounded-tr-lg">After Purification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-1 px-2 font-medium">Acid Value (mgKOH/g)</td>
+                                <td class="py-1 px-2">0.8</td>
+                                <td class="py-1 px-2">0.2 <span class="improvement-arrow improvement-down">↓75%</span></td>
+                                <td class="py-1 px-2">0.1 <span class="improvement-arrow improvement-down">↓88%</span></td>
+                                <td class="py-1 px-2">0.01 <span class="improvement-arrow improvement-down">↓99%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-1 px-2 font-medium">Carbon Residue (%)</td>
+                                <td class="py-1 px-2">1.8</td>
+                                <td class="py-1 px-2">0.3 <span class="improvement-arrow improvement-down">↓75%</span></td>
+                                <td class="py-1 px-2">0.1 <span class="improvement-arrow improvement-down">↓92%</span></td>
+                                <td class="py-1 px-2">0.05 <span class="improvement-arrow improvement-down">↓96%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-1 px-2 font-medium">Flash Point (℃)</td>
+                                <td class="py-1 px-2">180</td>
+                                <td class="py-1 px-2">200 <span class="improvement-arrow improvement-up">↑11%</span></td>
+                                <td class="py-1 px-2">205 <span class="improvement-arrow improvement-up">↑14%</span></td>
+                                <td class="py-1 px-2">210 <span class="improvement-arrow improvement-up">↑17%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-2 text-center text-gray-600 text-xs">
+                    <p>Note: Lower acid value and carbon residue are better; higher flash point and thermal efficiency are better</p>
+                </div>
+                
+                <!-- Oil Appearance Comparison -->
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold text-primary mb-4 text-center">Oil Appearance Before & After Retrofit</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Before Retrofit -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <div class="relative h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="../oil/images/oil.jpg" 
+                                     alt="Oil before retrofit" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center py-2">
+                                    <span class="text-sm font-bold">Before Retrofit</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold text-danger mb-2">Issues</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-circle text-danger mr-2 mt-1"></i>
+                                        <span>Dark color, opaque</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-circle text-danger mr-2 mt-1"></i>
+                                        <span>Containing gums and wall sludge</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-circle text-danger mr-2 mt-1"></i>
+                                        <span>High viscosity, poor flow</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- After Retrofit -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <div class="relative h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="../oil/images/oil1.jpg" 
+                                     alt="Oil after retrofit" 
+                                     class="w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center py-2">
+                                    <span class="text-sm font-bold">After Retrofit</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h4 class="font-bold text-success mb-2">Improvements</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                        <span>Transparent color, like new oil</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                        <span>No gums or suspended matter</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                        <span>Normal viscosity, good fluidity</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center text-sm text-gray-600">
+                        <p>Note: Images are for illustration purposes; actual results may vary</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 经济效益 -->
+        <section id="economic" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
+            <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
+                <i class="fas fa-chart-bar bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
+                Economic Benefits
+            </h2>
+            <p class="text-lg mb-4">Significant economic and environmental benefits demonstrated in chemical industry applications:</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
+                    <div class="text-2xl md:text-3xl font-bold mb-1">4M+ USD</div>
+                    <p class="text-sm">Saved on new oil</p>
+                </div>
+                <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
+                    <div class="text-2xl md:text-3xl font-bold mb-1">3M+ USD</div>
+                    <p class="text-sm">Saved on downtime</p>
+                </div>
+                <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
+                    <div class="text-2xl md:text-3xl font-bold mb-1">10-20%</div>
+                    <p class="text-sm">Energy reduction</p>
+                </div>
+                <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
+                    <div class="text-2xl md:text-3xl font-bold mb-1">8M+ USD</div>
+                    <p class="text-sm">Total savings</p>
+                </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-primary mb-4">Before vs After Retrofit</h3>
+            
+            <div class="space-y-4">
+                <!-- Comparison 1 -->
+                <div class="comparison-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                        <!-- Before -->
+                        <div class="p-4 bg-red-50">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-danger flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-danger">Before Retrofit</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">Acid Value Exceeded</span>
+                                <p class="text-xs">High acid value increased coking risk significantly</p>
+                            </div>
+                        </div>
+                        
+                        <!-- After -->
+                        <div class="p-4 bg-green-50">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-success flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-success">After Retrofit</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">No Coking</span>
+                                <p class="text-xs">Acid value normalized, eliminating coking issues</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Effect -->
+                        <div class="p-4 bg-primary/5">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-primary">Economic Impact</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <p class="text-xs font-semibold">Saved $400K on oil replacement</p>
+                                <p class="text-gray-600 text-xs mt-1">Avoided system maintenance costs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comparison 2 -->
+                <div class="comparison-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                        <!-- Before -->
+                        <div class="p-4 bg-red-50">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-danger flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-danger">Before Retrofit</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">High Carbon Residue</span>
+                                <p class="text-xs">Accumulated carbon reduced heat transfer efficiency</p>
+                            </div>
+                        </div>
+                        
+                        <!-- After -->
+                        <div class="p-4 bg-green-50">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-success flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-success">After Retrofit</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">No Cleaning Needed</span>
+                                <p class="text-xs">Carbon residue effectively removed without shutdown</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Effect -->
+                        <div class="p-4 bg-primary/5">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-primary">Economic Impact</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <p class="text-xs font-semibold">Saved $300K on downtime</p>
+                                <p class="text-gray-600 text-xs mt-1">Avoided production loss during maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comparison 3 -->
+                <div class="comparison-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                        <!-- Before -->
+                        <div class="p-4 bg-red-50">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-danger flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-danger">Before Retrofit</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">Low Thermal Efficiency</span>
+                                <p class="text-xs">System inefficiency increased energy consumption</p>
+                            </div>
+                        </div>
+                        
+                        <!-- After -->
+                        <div class="p-4 bg-green-50">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-success flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-success">After Retrofit</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">High Efficiency</span>
+                                <p class="text-xs">Reduced temperature difference, improved heat transfer</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Effect -->
+                        <div class="p-4 bg-primary/5">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4 class="font-bold text-base text-primary">Economic Impact</h4>
+                            </div>
+                            <div class="bg-white/80 rounded-lg p-2 shadow-sm">
+                                <p class="text-xs font-semibold">Energy reduced by 10-20%</p>
+                                <p class="text-gray-600 text-xs mt-1">Significant annual energy cost savings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 客户案例 -->
+        <section id="cases" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
+            <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
+                <i class="fas fa-building bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
+                Client Applications
+            </h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-primary mb-4">Industry Applications</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                    <!-- Industry 1 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Plastics & Fibers</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Reaction Kettles</li>
+                            <li>Fractionation Towers</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 2 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Chemical & Petrochemical</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Reactors</li>
+                            <li>Distillation Columns</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 3 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Textiles</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Fiber Melting</li>
+                            <li>Board Presses</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 4 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">New Energy Materials</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Polysilicon Growth</li>
+                            <li>Battery Electrode Drying</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 5 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Food & Pharma</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Baking Equipment</li>
+                            <li>Aseptic Drying</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 6 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Building Materials</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Asphalt Melting</li>
+                            <li>Gypsum Board Drying</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 7 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Paper & Textile</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Heat Setting</li>
+                            <li>Paper Drying</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Industry 8 -->
+                    <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
+                        <div class="text-primary font-bold text-xs mb-1">Metal Processing</div>
+                        <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
+                            <li class="mb-0.5">Quenching & Tempering</li>
+                            <li>Degreasing & Plating</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-primary mb-4">Case Studies</h3>
+                
+                <!-- Case 1 -->
+                <div class="case-card-mobile">
+                    <div class="case-header-mobile">
+                        <i class="fas fa-oil-well mr-2"></i> PCB Manufacturer Retrofit
+                    </div>
+                    <div class="case-body-mobile">
+                        <p class="mb-3 text-sm">A PCB manufacturer faced severe coking issues causing poor heat transfer and increased defect rates.</p>
+                        <p class="font-semibold text-primary text-sm">Solution:</p>
+                        <ul class="text-xs mb-4 pl-4 list-disc">
+                            <li class="mb-1">Implemented online deacidification technology</li>
+                            <li class="mb-1">Installed purification system for maintenance-free operation</li>
+                            <li class="mb-1">Gradual removal of wall sludge and coke deposits</li>
+                            <li>Restored flash point, acid value, and carbon residue</li>
+                        </ul>
+                        <div class="case-stats-mobile">
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">$400K+</div>
+                                <div class="stat-label-mobile">Cost Savings</div>
+                            </div>
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">18%</div>
+                                <div class="stat-label-mobile">Energy Reduction</div>
+                            </div>
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">0 Changes</div>
+                                <div class="stat-label-mobile">Oil Replacement</div>
+                            </div>
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">320 tons</div>
+                                <div class="stat-label-mobile">CO₂ Reduction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="case-card-mobile">
+                    <div class="case-header-mobile">
+                        <i class="fas fa-industry mr-2"></i> Chemical Plant Green Transformation
+                    </div>
+                    <div class="case-body-mobile">
+                        <p class="mb-3 text-sm">A chemical plant received shutdown notice for 200 tons of degraded heat transfer oil.</p>
+                        <p class="font-semibold text-primary text-sm">Solution:</p>
+                        <ul class="text-xs mb-4 pl-4 list-disc">
+                            <li class="mb-1">Online purification to restore oil quality</li>
+                            <li class="mb-1">Flocculation to normalize acid value</li>
+                            <li class="mb-1">Adsorption filtration to remove oxides</li>
+                            <li>Online light fraction removal to restore flash point</li>
+                        </ul>
+                        <div class="case-stats-mobile">
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">$280K+</div>
+                                <div class="stat-label-mobile">Cost Savings</div>
+                            </div>
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">22%</div>
+                                <div class="stat-label-mobile">Energy Reduction</div>
+                            </div>
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">95%</div>
+                                <div class="stat-label-mobile">Waste Reduction</div>
+                            </div>
+                            <div class="stat-item-mobile">
+                                <div class="stat-value-mobile">250 tons</div>
+                                <div class="stat-label-mobile">CO₂ Reduction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 环保效益 -->
+        <section id="environmental" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
+            <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
+                <i class="fas fa-leaf bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
+                Environmental Impact
+            </h2>
+            
+            <!-- 优化为2×2网格布局 -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-lightGreen rounded-xl eco-card">
+                    <div class="eco-card-icon">
+                        <i class="fas fa-recycle text-primary"></i>
+                    </div>
+                    <h3 class="eco-card-title text-primary">Reduce Waste Oil</h3>
+                    <p class="eco-card-text">Lifetime maintenance-free operation minimizes waste oil generation and improper disposal risks.</p>
+                    <div class="eco-card-value">
+                        250+ tons waste oil reduced
+                    </div>
+                </div>
+                
+                <div class="bg-lightGreen rounded-xl eco-card">
+                    <div class="eco-card-icon">
+                        <i class="fas fa-bolt text-primary"></i>
+                    </div>
+                    <h3 class="eco-card-title text-primary">Lower Energy Consumption</h3>
+                    <p class="eco-card-text">10-20% improvement in heat transfer efficiency reduces fuel consumption and emissions.</p>
+                    <div class="eco-card-value">
+                        500 tons CO₂ reduced annually
+                    </div>
+                </div>
+                
+                <div class="bg-lightGreen rounded-xl eco-card">
+                    <div class="eco-card-icon">
+                        <i class="fas fa-globe-americas text-primary"></i>
+                    </div>
+                    <h3 class="eco-card-title text-primary">Resource Circularity</h3>
+                    <p class="eco-card-text">Oil recycling maximizes resource utilization and reduces environmental burden of new oil production.</p>
+                    <div class="eco-card-value">
+                        95% resource utilization
+                    </div>
+                </div>
+                
+                <div class="bg-lightGreen/50 rounded-xl eco-card flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="eco-card-icon">
+                            <i class="fas fa-leaf text-primary"></i>
+                        </div>
+                        <h3 class="eco-card-title text-primary">Green Production</h3>
+                        <p class="eco-card-text">Supporting sustainable manufacturing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-primary/10 rounded-xl p-5">
+                <h3 class="text-xl font-bold text-primary mb-3 flex items-center">
+                    <i class="fas fa-award text-accent mr-2"></i> Supporting Green Factory Certification
+                </h3>
+                <p class="text-sm mb-4">Our solution aligns with national green manufacturing standards and environmental policies:</p>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
+                        <span>Meet environmental compliance requirements for industrial oils</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
+                        <span>Reduce hazardous waste disposal costs and environmental risks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
+                        <span>Enhance green manufacturing credentials and market competitiveness</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
+                        <span>Contribute to carbon neutrality goals and national climate strategy</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 实施计划 -->
+        <section id="implementation" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
+            <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
+                <i class="fas fa-calendar-alt bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
+                Implementation Plan
+            </h2>
+            
+            <div class="relative pl-8 mt-6">
+                <div class="absolute left-3 top-0 bottom-0 w-0.5 bg-primary"></div>
+                <div class="relative mb-6">
+                    <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
+                    <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-primary mb-1">Assessment & Testing</h3>
+                        <p class="text-sm">Conduct environmental testing and experiments on oil samples to develop a customized green restoration plan.</p>
+                        <div class="mt-2 text-xs text-gray-600">
+                            <i class="far fa-clock mr-1"></i> Duration: 1 week
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-6">
+                    <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
+                    <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-primary mb-1">Equipment Customization</h3>
+                        <p class="text-sm">Design low-energy, zero-emission purification equipment that meets environmental standards.</p>
+                        <div class="mt-2 text-xs text-gray-600">
+                            <i class="far fa-clock mr-1"></i> Duration: 3-4 weeks
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative mb-6">
+                    <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
+                    <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-primary mb-1">Installation & Commissioning</h3>
+                        <p class="text-sm">Professional installation with zero pollution, system integration, and environmental performance testing.</p>
+                        <div class="mt-2 text-xs text-gray-600">
+                            <i class="far fa-clock mr-1"></i> Duration: 3-5 days (no shutdown)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
+                    <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-primary mb-1">Maintenance Service</h3>
+                        <p class="text-sm">Provide environmental monitoring, energy efficiency assessment, and maintenance to ensure optimal performance.</p>
+                        <div class="mt-2 text-xs text-gray-600">
+                            <i class="far fa-clock mr-1"></i> Duration: Lifetime service
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <a href="#contact" class="block bg-gradient-accent text-primary text-center font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    Request Solution Details <i class="fas fa-leaf ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 联系我们 -->
+    <footer id="contact" class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-xl md:text-2xl font-bold text-accent mb-4 text-center">
+                    <i class="fas fa-envelope mr-2"></i>Contact Us
+                </h2>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold mb-4 text-accent">Get Solution & Quotation</h3>
+                            <p class="text-sm mb-4">Contact us for a customized solution.</p>
+                            
+                            <div class="space-y-2 text-sm">
+                                <div>
+                                    <i class="fas fa-phone-alt text-accent mr-2"></i>
+                                    <span>+86 132 4287 7076</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-envelope text-accent mr-2"></i>
+                                    <span>Peter.choy.wong@outlook.com</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-map-marker-alt text-accent mr-2"></i>
+                                    <span>No. 106 Fengze East Road, Nansha District, Guangzhou, China</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold mb-4 text-accent">Send Inquiry</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" id="name" placeholder="Your Name" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" id="phone" placeholder="Contact Phone" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" id="email" placeholder="Email Address" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea id="message" rows="3" placeholder="Your Requirements" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-accent text-primary font-bold py-2 rounded-md hover:bg-accentDark transition-colors">
+                                    Submit Inquiry
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-6 text-white/80 text-sm">
+                    <p class="mb-1">© 2023 All Rights Reserved</p>
+                    <p>粤ICP备2023020642号-1</p>
+                    <p class="mt-2 text-accent font-bold">Green Production · Circular Economy · Sustainable Development</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航菜单切换
+            document.getElementById('menuToggle').addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobileMenu');
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // 关闭移动菜单
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 100) {
+                    navbar.classList.add('py-2', 'shadow-lg');
+                    navbar.classList.remove('py-3', 'shadow-md');
+                } else {
+                    navbar.classList.add('py-3', 'shadow-md');
+                    navbar.classList.remove('py-2', 'shadow-lg');
+                }
+            });
+            
+            // 滚动动画
+            function checkVisibility() {
+                const sections = document.querySelectorAll('.section-fade-in');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (sectionTop < windowHeight * 0.85) {
+                        section.classList.add('section-visible');
+                    }
+                });
+            }
+            
+            // 初始检查
+            checkVisibility();
+            
+            // 滚动时节流检查
+            let isScrolling = false;
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        checkVisibility();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            });
+            
+            // 表单提交处理
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const phone = document.getElementById('phone').value;
+                    
+                    if (!name || !phone) {
+                        alert('Please enter your name and contact phone number');
+                        return;
+                    }
+                    
+                    alert('Your inquiry has been submitted. Our green technology consultant will contact you shortly!');
+                    contactForm.reset();
+                });
+            }
+
+            // 新增：禁用右键菜单和查看源代码的快捷键
+            // 禁用右键菜单
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // 禁用常用查看源代码的快捷键
+            document.addEventListener('keydown', function(e) {
+                // 禁用Ctrl+U (查看源代码)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                }
+                // 禁用Ctrl+Shift+I (打开开发者工具)
+                if (e.ctrlKey && e.shiftKey && e.key === 'i') {
+                    e.preventDefault();
+                }
+                // 禁用F12 (打开开发者工具)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                }
+                // 禁用Ctrl+Shift+C (检查元素)
+                if (e.ctrlKey && e.shiftKey && e.key === 'c') {
+                    e.preventDefault();
+                }
+                // 禁用Ctrl+Shift+J (打开控制台)
+                if (e.ctrlKey && e.shiftKey && e.key === 'j') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
