@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Lifetime Maintenance-Free Heat Transfer Oil System Retrofit Solution</title>
-    
+    <title data-translate="page-title">Lifetime Maintenance-Free Heat Transfer Oil System Retrofit Solution</title>
+
     <!-- 社交媒体分享元标签 -->
-    <meta property="og:title" content="Lifetime Maintenance-Free Heat Transfer Oil System">
-    <meta property="og:description" content="Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs.">
+    <meta property="og:title" content="Lifetime Maintenance-Free Heat Transfer Oil System" data-translate-attr="content" data-translate="og-title">
+    <meta property="og:description" content="Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs." data-translate-attr="content" data-translate="og-description">
     <meta property="og:image" content="http://www.gzjds.top/oil/images/oil1.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="315">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://your-website-url.com">
-    
+
     <!-- Twitter 特定标签 -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lifetime Maintenance-Free Heat Transfer Oil System">
-    <meta name="twitter:description" content="Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs.">
+    <meta name="twitter:title" content="Lifetime Maintenance-Free Heat Transfer Oil System" data-translate-attr="content" data-translate="twitter-title">
+    <meta name="twitter:description" content="Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs." data-translate-attr="content" data-translate="twitter-description">
     <meta name="twitter:image" content="http://www.gzjds.top/oil/images/oil1.jpg">
     
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
@@ -440,6 +440,111 @@
             font-size: 0.8rem;
             color: #666;
         }
+
+        /* 语言切换器样式 - 简化版 */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .language-button {
+            background: rgba(46, 125, 50, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .language-button:hover {
+            background: rgba(46, 125, 50, 1);
+            transform: scale(1.1);
+        }
+        .language-button::after {
+            content: 'Language / Язык';
+            position: absolute;
+            bottom: -35px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .language-button:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            min-width: 140px;
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        .language-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .language-option {
+            padding: 12px 16px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+        .language-option:hover {
+            background-color: #f5f5f5;
+        }
+        .language-option:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+        .language-option:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+        .language-option.active {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .language-switcher {
+                top: 15px;
+                right: 15px;
+            }
+            .language-button {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -449,16 +554,16 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-leaf text-accent text-xl"></i>
-                <span class="font-bold text-lg">Heat Transfer Oil Solutions</span>
+                <span class="font-bold text-lg" data-translate="nav-brand">Heat Transfer Oil Solutions</span>
             </div>
             <div class="hidden md:flex space-x-6">
-                <a href="#purpose" class="hover:text-accent transition-colors">Solution Purpose</a>
-                <a href="#technology" class="hover:text-accent transition-colors">Technology</a>
-                <a href="#economic" class="hover:text-accent transition-colors">Economic Benefits</a>
-                <a href="#cases" class="hover:text-accent transition-colors">Case Studies</a>
-                <a href="#environmental" class="hover:text-accent transition-colors">Environmental Impact</a>
-                <a href="#implementation" class="hover:text-accent transition-colors">Implementation</a>
-                <a href="#contact" class="hover:text-accent transition-colors">Contact Us</a>
+                <a href="#purpose" class="hover:text-accent transition-colors" data-translate="nav-purpose">Solution Purpose</a>
+                <a href="#technology" class="hover:text-accent transition-colors" data-translate="nav-technology">Technology</a>
+                <a href="#economic" class="hover:text-accent transition-colors" data-translate="nav-economic">Economic Benefits</a>
+                <a href="#cases" class="hover:text-accent transition-colors" data-translate="nav-cases">Case Studies</a>
+                <a href="#environmental" class="hover:text-accent transition-colors" data-translate="nav-environmental">Environmental Impact</a>
+                <a href="#implementation" class="hover:text-accent transition-colors" data-translate="nav-implementation">Implementation</a>
+                <a href="#contact" class="hover:text-accent transition-colors" data-translate="nav-contact">Contact Us</a>
             </div>
             <button class="md:hidden text-white" id="menuToggle">
                 <i class="fas fa-bars text-xl"></i>
@@ -466,16 +571,33 @@
         </div>
         <div class="md:hidden hidden bg-primary/95 w-full" id="mobileMenu">
             <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
-                <a href="#purpose" class="py-2 hover:text-accent transition-colors">Solution Purpose</a>
-                <a href="#technology" class="py-2 hover:text-accent transition-colors">Technology</a>
-                <a href="#economic" class="py-2 hover:text-accent transition-colors">Economic Benefits</a>
-                <a href="#cases" class="py-2 hover:text-accent transition-colors">Case Studies</a>
-                <a href="#environmental" class="py-2 hover:text-accent transition-colors">Environmental Impact</a>
-                <a href="#implementation" class="py-2 hover:text-accent transition-colors">Implementation</a>
-                <a href="#contact" class="py-2 hover:text-accent transition-colors">Contact Us</a>
+                <a href="#purpose" class="py-2 hover:text-accent transition-colors" data-translate="nav-purpose">Solution Purpose</a>
+                <a href="#technology" class="py-2 hover:text-accent transition-colors" data-translate="nav-technology">Technology</a>
+                <a href="#economic" class="py-2 hover:text-accent transition-colors" data-translate="nav-economic">Economic Benefits</a>
+                <a href="#cases" class="py-2 hover:text-accent transition-colors" data-translate="nav-cases">Case Studies</a>
+                <a href="#environmental" class="py-2 hover:text-accent transition-colors" data-translate="nav-environmental">Environmental Impact</a>
+                <a href="#implementation" class="py-2 hover:text-accent transition-colors" data-translate="nav-implementation">Implementation</a>
+                <a href="#contact" class="py-2 hover:text-accent transition-colors" data-translate="nav-contact">Contact Us</a>
             </div>
         </div>
     </nav>
+
+    <!-- 语言切换器 - 固定位置 -->
+    <div class="language-switcher">
+        <button class="language-button" id="languageButton">
+            <span class="flag">🇺🇸</span>
+        </button>
+        <div class="language-dropdown" id="languageDropdown">
+            <div class="language-option active" data-lang="en">
+                <span class="flag">🇺🇸</span>
+                <span>English</span>
+            </div>
+            <div class="language-option" data-lang="ru">
+                <span class="flag">🇷🇺</span>
+                <span>Русский</span>
+            </div>
+        </div>
+    </div>
 
     <!-- 头部横幅 -->
     <header class="bg-gradient-primary text-white pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
@@ -485,14 +607,14 @@
         </div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6 text-shadow leading-tight">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-6 text-shadow leading-tight" data-translate="header-title">
                     Heat Transfer Oil System Retrofit Solution
                 </h1>
-                <div class="text-[clamp(1.2rem,3vw,1.6rem)] font-semibold mb-8 text-accent">
+                <div class="text-[clamp(1.2rem,3vw,1.6rem)] font-semibold mb-8 text-accent" data-translate="header-subtitle">
                     Online Restoration · Lifetime Maintenance-Free
                 </div>
                 <div class="bg-accent text-primary font-bold py-3 px-8 rounded-full inline-block text-lg shadow-lg transform hover:scale-105 transition-transform">
-                    <i class="fas fa-leaf mr-2"></i>Solve Heat Transfer Oil Aging Issues Permanently
+                    <i class="fas fa-leaf mr-2"></i><span data-translate="header-cta">Solve Heat Transfer Oil Aging Issues Permanently</span>
                 </div>
             </div>
         </div>
@@ -503,44 +625,44 @@
         <section id="purpose" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
             <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
                 <i class="fas fa-bullseye bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
-                Solution Purpose
+                <span data-translate="purpose-title">Solution Purpose</span>
             </h2>
-            <p class="text-lg mb-4 leading-tight">
+            <p class="text-lg mb-4 leading-tight" data-translate="purpose-description">
                 Achieve "online restoration," "lifetime maintenance-free operation," and "continuous compliance with standards" for heat transfer systems, fundamentally solving safety, energy consumption, and environmental issues caused by oil aging.
             </p>
-            
+
             <!-- 优化为2×2网格布局 -->
             <div class="grid grid-cols-2 gap-3">
                 <div class="bg-lightGreen rounded-lg purpose-card">
                     <div class="purpose-icon">
                         <i class="fas fa-sync-alt text-primary"></i>
                     </div>
-                    <h3 class="purpose-title text-primary">Online Restoration</h3>
-                    <p class="purpose-text">Achieve purification without production interruption</p>
+                    <h3 class="purpose-title text-primary" data-translate="purpose-card1-title">Online Restoration</h3>
+                    <p class="purpose-text" data-translate="purpose-card1-text">Achieve purification without production interruption</p>
                 </div>
-                
+
                 <div class="bg-lightGreen rounded-lg purpose-card">
                     <div class="purpose-icon">
                         <i class="fas fa-recycle text-primary"></i>
                     </div>
-                    <h3 class="purpose-title text-primary">Lifetime Maintenance-Free</h3>
-                    <p class="purpose-text">Balance degradation byproducts, eliminate oil changes</p>
+                    <h3 class="purpose-title text-primary" data-translate="purpose-card2-title">Lifetime Maintenance-Free</h3>
+                    <p class="purpose-text" data-translate="purpose-card2-text">Balance degradation byproducts, eliminate oil changes</p>
                 </div>
-                
+
                 <div class="bg-lightGreen rounded-lg purpose-card">
                     <div class="purpose-icon">
                         <i class="fas fa-seedling text-primary"></i>
                     </div>
-                    <h3 class="purpose-title text-primary">Energy Savings</h3>
-                    <p class="purpose-text">Improve thermal efficiency, reduce energy consumption</p>
+                    <h3 class="purpose-title text-primary" data-translate="purpose-card3-title">Energy Savings</h3>
+                    <p class="purpose-text" data-translate="purpose-card3-text">Improve thermal efficiency, reduce energy consumption</p>
                 </div>
-                
+
                 <div class="bg-lightGreen rounded-lg purpose-card">
                     <div class="purpose-icon">
                         <i class="fas fa-check-circle text-primary"></i>
                     </div>
-                    <h3 class="purpose-title text-primary">Continuous Compliance</h3>
-                    <p class="purpose-text">Maintain oil quality standards consistently</p>
+                    <h3 class="purpose-title text-primary" data-translate="purpose-card4-title">Continuous Compliance</h3>
+                    <p class="purpose-text" data-translate="purpose-card4-text">Maintain oil quality standards consistently</p>
                 </div>
             </div>
         </section>
@@ -549,69 +671,69 @@
         <section id="technology" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
             <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
                 <i class="fas fa-tools bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
-                Green Technology Solution
+                <span data-translate="technology-title">Green Technology Solution</span>
             </h2>
-            <p class="text-lg mb-2"><span class="font-semibold">Core Advantages:</span> 【Low Emission | Low Energy Consumption | Physical Process | Circular Economy】</p>
-            
+            <p class="text-lg mb-2"><span class="font-semibold" data-translate="technology-advantages-label">Core Advantages:</span> <span data-translate="technology-advantages">【Low Emission | Low Energy Consumption | Physical Process | Circular Economy】</span></p>
+
             <div class="mt-6 space-y-4">
                 <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
                     <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">1</div>
-                    <h3 class="text-xl font-bold text-primary mb-1">Deacidification & Degumming</h3>
-                    <p class="text-sm">Effectively removes gums, asphaltenes, and acidic contaminants to prevent coking and extend equipment life.</p>
+                    <h3 class="text-xl font-bold text-primary mb-1" data-translate="tech-step1-title">Deacidification & Degumming</h3>
+                    <p class="text-sm" data-translate="tech-step1-desc">Effectively removes gums, asphaltenes, and acidic contaminants to prevent coking and extend equipment life.</p>
                 </div>
-                
+
                 <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
                     <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">2</div>
-                    <h3 class="text-xl font-bold text-primary mb-1">Online Light Fraction Removal</h3>
-                    <p class="text-sm">Removes light fractions without shutdown, improving flash point and heat transfer while preventing vapor lock and cavitation.</p>
+                    <h3 class="text-xl font-bold text-primary mb-1" data-translate="tech-step2-title">Online Light Fraction Removal</h3>
+                    <p class="text-sm" data-translate="tech-step2-desc">Removes light fractions without shutdown, improving flash point and heat transfer while preventing vapor lock and cavitation.</p>
                 </div>
-                
+
                 <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
                     <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">3</div>
-                    <h3 class="text-xl font-bold text-primary mb-1">Physical Purification Technology</h3>
-                    <p class="text-sm">Utilizes flocculation adsorption and separation technology with minimal oil loss.</p>
+                    <h3 class="text-xl font-bold text-primary mb-1" data-translate="tech-step3-title">Physical Purification Technology</h3>
+                    <p class="text-sm" data-translate="tech-step3-desc">Utilizes flocculation adsorption and separation technology with minimal oil loss.</p>
                 </div>
-                
+
                 <div class="relative pl-14 pr-4 py-4 bg-lightGreen rounded-lg border-l-4 border-primary shadow-sm">
                     <div class="absolute left-4 top-4 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg">4</div>
-                    <h3 class="text-xl font-bold text-primary mb-1">Circular Economy Model</h3>
-                    <p class="text-sm">Restored oil exceeds national standards, achieving resource circularity.</p>
+                    <h3 class="text-xl font-bold text-primary mb-1" data-translate="tech-step4-title">Circular Economy Model</h3>
+                    <p class="text-sm" data-translate="tech-step4-desc">Restored oil exceeds national standards, achieving resource circularity.</p>
                 </div>
             </div>
             
             <div class="mt-8">
-                <h3 class="text-xl font-bold text-primary mb-4 text-center">Technical Performance Comparison</h3>
+                <h3 class="text-xl font-bold text-primary mb-4 text-center" data-translate="tech-comparison-title">Technical Performance Comparison</h3>
                 <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm table-responsive" id="techTable">
                     <div class="scroll-indicator">
-                        <i class="fas fa-arrow-left mr-1"></i> Scroll horizontally
+                        <i class="fas fa-arrow-left mr-1"></i> <span data-translate="scroll-hint">Scroll horizontally</span>
                     </div>
                     <table class="w-full text-left min-w-[640px] text-sm">
                         <thead>
                             <tr>
-                                <th class="py-1 px-2 rounded-tl-lg">Parameter</th>
-                                <th class="py-1 px-2">Original Oil</th>
-                                <th class="py-1 px-2">After Deacidification</th>
-                                <th class="py-1 px-2">After Light Fraction Removal</th>
-                                <th class="py-1 px-2 rounded-tr-lg">After Purification</th>
+                                <th class="py-1 px-2 rounded-tl-lg" data-translate="table-parameter">Parameter</th>
+                                <th class="py-1 px-2" data-translate="table-original">Original Oil</th>
+                                <th class="py-1 px-2" data-translate="table-deacid">After Deacidification</th>
+                                <th class="py-1 px-2" data-translate="table-light-removal">After Light Fraction Removal</th>
+                                <th class="py-1 px-2 rounded-tr-lg" data-translate="table-purification">After Purification</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="py-1 px-2 font-medium">Acid Value (mgKOH/g)</td>
+                                <td class="py-1 px-2 font-medium" data-translate="table-acid-value">Acid Value (mgKOH/g)</td>
                                 <td class="py-1 px-2">0.8</td>
                                 <td class="py-1 px-2">0.2 <span class="improvement-arrow improvement-down">↓75%</span></td>
                                 <td class="py-1 px-2">0.1 <span class="improvement-arrow improvement-down">↓88%</span></td>
                                 <td class="py-1 px-2">0.01 <span class="improvement-arrow improvement-down">↓99%</span></td>
                             </tr>
                             <tr>
-                                <td class="py-1 px-2 font-medium">Carbon Residue (%)</td>
+                                <td class="py-1 px-2 font-medium" data-translate="table-carbon-residue">Carbon Residue (%)</td>
                                 <td class="py-1 px-2">1.8</td>
                                 <td class="py-1 px-2">0.3 <span class="improvement-arrow improvement-down">↓75%</span></td>
                                 <td class="py-1 px-2">0.1 <span class="improvement-arrow improvement-down">↓92%</span></td>
                                 <td class="py-1 px-2">0.05 <span class="improvement-arrow improvement-down">↓96%</span></td>
                             </tr>
                             <tr>
-                                <td class="py-1 px-2 font-medium">Flash Point (℃)</td>
+                                <td class="py-1 px-2 font-medium" data-translate="table-flash-point">Flash Point (℃)</td>
                                 <td class="py-1 px-2">180</td>
                                 <td class="py-1 px-2">200 <span class="improvement-arrow improvement-up">↑11%</span></td>
                                 <td class="py-1 px-2">205 <span class="improvement-arrow improvement-up">↑14%</span></td>
@@ -621,38 +743,38 @@
                     </table>
                 </div>
                 <div class="mt-2 text-center text-gray-600 text-xs">
-                    <p>Note: Lower acid value and carbon residue are better; higher flash point and thermal efficiency are better</p>
+                    <p data-translate="table-note">Note: Lower acid value and carbon residue are better; higher flash point and thermal efficiency are better</p>
                 </div>
                 
                 <!-- Oil Appearance Comparison -->
                 <div class="mt-8">
-                    <h3 class="text-xl font-bold text-primary mb-4 text-center">Oil Appearance Before & After Retrofit</h3>
-                    
+                    <h3 class="text-xl font-bold text-primary mb-4 text-center" data-translate="oil-comparison-title">Oil Appearance Before & After Retrofit</h3>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Before Retrofit -->
                         <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                             <div class="relative h-48 bg-gray-100 flex items-center justify-center">
-                                <img src="../oil/images/oil.jpg" 
-                                     alt="Oil before retrofit" 
+                                <img src="../oil/images/oil.jpg"
+                                     alt="Oil before retrofit"
                                      class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center py-2">
-                                    <span class="text-sm font-bold">Before Retrofit</span>
+                                    <span class="text-sm font-bold" data-translate="oil-before-label">Before Retrofit</span>
                                 </div>
                             </div>
                             <div class="p-4">
-                                <h4 class="font-bold text-danger mb-2">Issues</h4>
+                                <h4 class="font-bold text-danger mb-2" data-translate="oil-issues-title">Issues</h4>
                                 <ul class="text-sm space-y-1">
                                     <li class="flex items-start">
                                         <i class="fas fa-exclamation-circle text-danger mr-2 mt-1"></i>
-                                        <span>Dark color, opaque</span>
+                                        <span data-translate="oil-issue1">Dark color, opaque</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fas fa-exclamation-circle text-danger mr-2 mt-1"></i>
-                                        <span>Containing gums and wall sludge</span>
+                                        <span data-translate="oil-issue2">Containing gums and wall sludge</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fas fa-exclamation-circle text-danger mr-2 mt-1"></i>
-                                        <span>High viscosity, poor flow</span>
+                                        <span data-translate="oil-issue3">High viscosity, poor flow</span>
                                     </li>
                                 </ul>
                             </div>
@@ -661,35 +783,35 @@
                         <!-- After Retrofit -->
                         <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                             <div class="relative h-48 bg-gray-100 flex items-center justify-center">
-                                <img src="../oil/images/oil1.jpg" 
-                                     alt="Oil after retrofit" 
+                                <img src="../oil/images/oil1.jpg"
+                                     alt="Oil after retrofit"
                                      class="w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center py-2">
-                                    <span class="text-sm font-bold">After Retrofit</span>
+                                    <span class="text-sm font-bold" data-translate="oil-after-label">After Retrofit</span>
                                 </div>
                             </div>
                             <div class="p-4">
-                                <h4 class="font-bold text-success mb-2">Improvements</h4>
+                                <h4 class="font-bold text-success mb-2" data-translate="oil-improvements-title">Improvements</h4>
                                 <ul class="text-sm space-y-1">
                                     <li class="flex items-start">
                                         <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
-                                        <span>Transparent color, like new oil</span>
+                                        <span data-translate="oil-improvement1">Transparent color, like new oil</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
-                                        <span>No gums or suspended matter</span>
+                                        <span data-translate="oil-improvement2">No gums or suspended matter</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
-                                        <span>Normal viscosity, good fluidity</span>
+                                        <span data-translate="oil-improvement3">Normal viscosity, good fluidity</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-4 text-center text-sm text-gray-600">
-                        <p>Note: Images are for illustration purposes; actual results may vary</p>
+                        <p data-translate="oil-note">Note: Images are for illustration purposes; actual results may vary</p>
                     </div>
                 </div>
             </div>
@@ -699,30 +821,30 @@
         <section id="economic" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
             <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
                 <i class="fas fa-chart-bar bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
-                Economic Benefits
+                <span data-translate="economic-title">Economic Benefits</span>
             </h2>
-            <p class="text-lg mb-4">Significant economic and environmental benefits demonstrated in chemical industry applications:</p>
-            
+            <p class="text-lg mb-4" data-translate="economic-description">Significant economic and environmental benefits demonstrated in chemical industry applications:</p>
+
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
                     <div class="text-2xl md:text-3xl font-bold mb-1">4M+ USD</div>
-                    <p class="text-sm">Saved on new oil</p>
+                    <p class="text-sm" data-translate="economic-stat1">Saved on new oil</p>
                 </div>
                 <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
                     <div class="text-2xl md:text-3xl font-bold mb-1">3M+ USD</div>
-                    <p class="text-sm">Saved on downtime</p>
+                    <p class="text-sm" data-translate="economic-stat2">Saved on downtime</p>
                 </div>
                 <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
                     <div class="text-2xl md:text-3xl font-bold mb-1">10-20%</div>
-                    <p class="text-sm">Energy reduction</p>
+                    <p class="text-sm" data-translate="economic-stat3">Energy reduction</p>
                 </div>
                 <div class="bg-gradient-primary text-white rounded-lg p-4 text-center shadow-md transform hover:scale-105 transition-transform">
                     <div class="text-2xl md:text-3xl font-bold mb-1">8M+ USD</div>
-                    <p class="text-sm">Total savings</p>
+                    <p class="text-sm" data-translate="economic-stat4">Total savings</p>
                 </div>
             </div>
-            
-            <h3 class="text-xl font-bold text-primary mb-4">Before vs After Retrofit</h3>
+
+            <h3 class="text-xl font-bold text-primary mb-4" data-translate="economic-comparison-title">Before vs After Retrofit</h3>
             
             <div class="space-y-4">
                 <!-- Comparison 1 -->
@@ -1031,76 +1153,76 @@
         <section id="environmental" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
             <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
                 <i class="fas fa-leaf bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
-                Environmental Impact
+                <span data-translate="environmental-title">Environmental Impact</span>
             </h2>
-            
+
             <!-- 优化为2×2网格布局 -->
             <div class="grid grid-cols-2 gap-4 mb-6">
                 <div class="bg-lightGreen rounded-xl eco-card">
                     <div class="eco-card-icon">
                         <i class="fas fa-recycle text-primary"></i>
                     </div>
-                    <h3 class="eco-card-title text-primary">Reduce Waste Oil</h3>
-                    <p class="eco-card-text">Lifetime maintenance-free operation minimizes waste oil generation and improper disposal risks.</p>
-                    <div class="eco-card-value">
+                    <h3 class="eco-card-title text-primary" data-translate="env-card1-title">Reduce Waste Oil</h3>
+                    <p class="eco-card-text" data-translate="env-card1-text">Lifetime maintenance-free operation minimizes waste oil generation and improper disposal risks.</p>
+                    <div class="eco-card-value" data-translate="env-card1-value">
                         250+ tons waste oil reduced
                     </div>
                 </div>
-                
+
                 <div class="bg-lightGreen rounded-xl eco-card">
                     <div class="eco-card-icon">
                         <i class="fas fa-bolt text-primary"></i>
                     </div>
-                    <h3 class="eco-card-title text-primary">Lower Energy Consumption</h3>
-                    <p class="eco-card-text">10-20% improvement in heat transfer efficiency reduces fuel consumption and emissions.</p>
-                    <div class="eco-card-value">
+                    <h3 class="eco-card-title text-primary" data-translate="env-card2-title">Lower Energy Consumption</h3>
+                    <p class="eco-card-text" data-translate="env-card2-text">10-20% improvement in heat transfer efficiency reduces fuel consumption and emissions.</p>
+                    <div class="eco-card-value" data-translate="env-card2-value">
                         500 tons CO₂ reduced annually
                     </div>
                 </div>
-                
+
                 <div class="bg-lightGreen rounded-xl eco-card">
                     <div class="eco-card-icon">
                         <i class="fas fa-globe-americas text-primary"></i>
                     </div>
-                    <h3 class="eco-card-title text-primary">Resource Circularity</h3>
-                    <p class="eco-card-text">Oil recycling maximizes resource utilization and reduces environmental burden of new oil production.</p>
-                    <div class="eco-card-value">
+                    <h3 class="eco-card-title text-primary" data-translate="env-card3-title">Resource Circularity</h3>
+                    <p class="eco-card-text" data-translate="env-card3-text">Oil recycling maximizes resource utilization and reduces environmental burden of new oil production.</p>
+                    <div class="eco-card-value" data-translate="env-card3-value">
                         95% resource utilization
                     </div>
                 </div>
-                
+
                 <div class="bg-lightGreen/50 rounded-xl eco-card flex items-center justify-center">
                     <div class="text-center">
                         <div class="eco-card-icon">
                             <i class="fas fa-leaf text-primary"></i>
                         </div>
-                        <h3 class="eco-card-title text-primary">Green Production</h3>
-                        <p class="eco-card-text">Supporting sustainable manufacturing</p>
+                        <h3 class="eco-card-title text-primary" data-translate="env-card4-title">Green Production</h3>
+                        <p class="eco-card-text" data-translate="env-card4-text">Supporting sustainable manufacturing</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="bg-primary/10 rounded-xl p-5">
                 <h3 class="text-xl font-bold text-primary mb-3 flex items-center">
-                    <i class="fas fa-award text-accent mr-2"></i> Supporting Green Factory Certification
+                    <i class="fas fa-award text-accent mr-2"></i> <span data-translate="env-certification-title">Supporting Green Factory Certification</span>
                 </h3>
-                <p class="text-sm mb-4">Our solution aligns with national green manufacturing standards and environmental policies:</p>
+                <p class="text-sm mb-4" data-translate="env-certification-desc">Our solution aligns with national green manufacturing standards and environmental policies:</p>
                 <ul class="space-y-2 text-sm">
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
-                        <span>Meet environmental compliance requirements for industrial oils</span>
+                        <span data-translate="env-benefit1">Meet environmental compliance requirements for industrial oils</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
-                        <span>Reduce hazardous waste disposal costs and environmental risks</span>
+                        <span data-translate="env-benefit2">Reduce hazardous waste disposal costs and environmental risks</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
-                        <span>Enhance green manufacturing credentials and market competitiveness</span>
+                        <span data-translate="env-benefit3">Enhance green manufacturing credentials and market competitiveness</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-primary mr-2 mt-1"></i>
-                        <span>Contribute to carbon neutrality goals and national climate strategy</span>
+                        <span data-translate="env-benefit4">Contribute to carbon neutrality goals and national climate strategy</span>
                     </li>
                 </ul>
             </div>
@@ -1110,58 +1232,58 @@
         <section id="implementation" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
             <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
                 <i class="fas fa-calendar-alt bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
-                Implementation Plan
+                <span data-translate="implementation-title">Implementation Plan</span>
             </h2>
-            
+
             <div class="relative pl-8 mt-6">
                 <div class="absolute left-3 top-0 bottom-0 w-0.5 bg-primary"></div>
                 <div class="relative mb-6">
                     <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
                     <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
-                        <h3 class="text-xl font-bold text-primary mb-1">Assessment & Testing</h3>
-                        <p class="text-sm">Conduct environmental testing and experiments on oil samples to develop a customized green restoration plan.</p>
+                        <h3 class="text-xl font-bold text-primary mb-1" data-translate="impl-step1-title">Assessment & Testing</h3>
+                        <p class="text-sm" data-translate="impl-step1-desc">Conduct environmental testing and experiments on oil samples to develop a customized green restoration plan.</p>
                         <div class="mt-2 text-xs text-gray-600">
-                            <i class="far fa-clock mr-1"></i> Duration: 1 week
+                            <i class="far fa-clock mr-1"></i> <span data-translate="impl-step1-duration">Duration: 1 week</span>
                         </div>
                     </div>
                 </div>
                 <div class="relative mb-6">
                     <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
                     <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
-                        <h3 class="text-xl font-bold text-primary mb-1">Equipment Customization</h3>
-                        <p class="text-sm">Design low-energy, zero-emission purification equipment that meets environmental standards.</p>
+                        <h3 class="text-xl font-bold text-primary mb-1" data-translate="impl-step2-title">Equipment Customization</h3>
+                        <p class="text-sm" data-translate="impl-step2-desc">Design low-energy, zero-emission purification equipment that meets environmental standards.</p>
                         <div class="mt-2 text-xs text-gray-600">
-                            <i class="far fa-clock mr-1"></i> Duration: 3-4 weeks
+                            <i class="far fa-clock mr-1"></i> <span data-translate="impl-step2-duration">Duration: 3-4 weeks</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="relative mb-6">
                     <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
                     <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
-                        <h3 class="text-xl font-bold text-primary mb-1">Installation & Commissioning</h3>
-                        <p class="text-sm">Professional installation with zero pollution, system integration, and environmental performance testing.</p>
+                        <h3 class="text-xl font-bold text-primary mb-1" data-translate="impl-step3-title">Installation & Commissioning</h3>
+                        <p class="text-sm" data-translate="impl-step3-desc">Professional installation with zero pollution, system integration, and environmental performance testing.</p>
                         <div class="mt-2 text-xs text-gray-600">
-                            <i class="far fa-clock mr-1"></i> Duration: 3-5 days (no shutdown)
+                            <i class="far fa-clock mr-1"></i> <span data-translate="impl-step3-duration">Duration: 3-5 days (no shutdown)</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="relative">
                     <div class="absolute left-[-18px] top-1 w-7 h-7 rounded-full bg-accent border-4 border-primary"></div>
                     <div class="bg-lightGreen rounded-lg p-4 ml-6 shadow-sm">
-                        <h3 class="text-xl font-bold text-primary mb-1">Maintenance Service</h3>
-                        <p class="text-sm">Provide environmental monitoring, energy efficiency assessment, and maintenance to ensure optimal performance.</p>
+                        <h3 class="text-xl font-bold text-primary mb-1" data-translate="impl-step4-title">Maintenance Service</h3>
+                        <p class="text-sm" data-translate="impl-step4-desc">Provide environmental monitoring, energy efficiency assessment, and maintenance to ensure optimal performance.</p>
                         <div class="mt-2 text-xs text-gray-600">
-                            <i class="far fa-clock mr-1"></i> Duration: Lifetime service
+                            <i class="far fa-clock mr-1"></i> <span data-translate="impl-step4-duration">Duration: Lifetime service</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-8">
                 <a href="#contact" class="block bg-gradient-accent text-primary text-center font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                    Request Solution Details <i class="fas fa-leaf ml-2"></i>
+                    <span data-translate="impl-cta">Request Solution Details</span> <i class="fas fa-leaf ml-2"></i>
                 </a>
             </div>
         </section>
@@ -1172,15 +1294,15 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-xl md:text-2xl font-bold text-accent mb-4 text-center">
-                    <i class="fas fa-envelope mr-2"></i>Contact Us
+                    <i class="fas fa-envelope mr-2"></i><span data-translate="contact-title">Contact Us</span>
                 </h2>
-                
+
                 <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <h3 class="text-lg font-bold mb-4 text-accent">Get Solution & Quotation</h3>
-                            <p class="text-sm mb-4">Contact us for a customized solution.</p>
-                            
+                            <h3 class="text-lg font-bold mb-4 text-accent" data-translate="contact-solution-title">Get Solution & Quotation</h3>
+                            <p class="text-sm mb-4" data-translate="contact-solution-desc">Contact us for a customized solution.</p>
+
                             <div class="space-y-2 text-sm">
                                 <div>
                                     <i class="fas fa-phone-alt text-accent mr-2"></i>
@@ -1192,45 +1314,420 @@
                                 </div>
                                 <div>
                                     <i class="fas fa-map-marker-alt text-accent mr-2"></i>
-                                    <span>No. 106 Fengze East Road, Nansha District, Guangzhou, China</span>
+                                    <span data-translate="contact-address">No. 106 Fengze East Road, Nansha District, Guangzhou, China</span>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div>
-                            <h3 class="text-lg font-bold mb-4 text-accent">Send Inquiry</h3>
+                            <h3 class="text-lg font-bold mb-4 text-accent" data-translate="contact-form-title">Send Inquiry</h3>
                             <form>
                                 <div class="mb-3">
-                                    <input type="text" id="name" placeholder="Your Name" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <input type="text" id="name" data-translate-placeholder="form-name-placeholder" placeholder="Your Name" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="tel" id="phone" placeholder="Contact Phone" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <input type="tel" id="phone" data-translate-placeholder="form-phone-placeholder" placeholder="Contact Phone" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" id="email" placeholder="Email Address" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <input type="email" id="email" data-translate-placeholder="form-email-placeholder" placeholder="Email Address" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent">
                                 </div>
                                 <div class="mb-3">
-                                    <textarea id="message" rows="3" placeholder="Your Requirements" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                                    <textarea id="message" rows="3" data-translate-placeholder="form-message-placeholder" placeholder="Your Requirements" class="w-full px-3 py-2 rounded-md bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
                                 </div>
-                                <button type="submit" class="w-full bg-accent text-primary font-bold py-2 rounded-md hover:bg-accentDark transition-colors">
+                                <button type="submit" class="w-full bg-accent text-primary font-bold py-2 rounded-md hover:bg-accentDark transition-colors" data-translate="form-submit-btn">
                                     Submit Inquiry
                                 </button>
                             </form>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="text-center mt-6 text-white/80 text-sm">
-                    <p class="mb-1">© 2023 All Rights Reserved</p>
+                    <p class="mb-1" data-translate="footer-copyright">© 2023 All Rights Reserved</p>
                     <p>粤ICP备2023020642号-1</p>
-                    <p class="mt-2 text-accent font-bold">Green Production · Circular Economy · Sustainable Development</p>
+                    <p class="mt-2 text-accent font-bold" data-translate="footer-slogan">Green Production · Circular Economy · Sustainable Development</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // 翻译数据
+        const translations = {
+            en: {
+                // 页面标题和元标签
+                'page-title': 'Lifetime Maintenance-Free Heat Transfer Oil System Retrofit Solution',
+                'og-title': 'Lifetime Maintenance-Free Heat Transfer Oil System',
+                'og-description': 'Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs.',
+                'twitter-title': 'Lifetime Maintenance-Free Heat Transfer Oil System',
+                'twitter-description': 'Achieve online restoration and lifetime maintenance-free operation for heat transfer systems, solving aging issues while saving energy and reducing costs.',
+
+                // 导航栏
+                'nav-brand': 'Heat Transfer Oil Solutions',
+                'nav-purpose': 'Solution Purpose',
+                'nav-technology': 'Technology',
+                'nav-economic': 'Economic Benefits',
+                'nav-cases': 'Case Studies',
+                'nav-environmental': 'Environmental Impact',
+                'nav-implementation': 'Implementation',
+                'nav-contact': 'Contact Us',
+
+                // 头部横幅
+                'header-title': 'Heat Transfer Oil System Retrofit Solution',
+                'header-subtitle': 'Online Restoration · Lifetime Maintenance-Free',
+                'header-cta': 'Solve Heat Transfer Oil Aging Issues Permanently',
+
+                // 方案目的
+                'purpose-title': 'Solution Purpose',
+                'purpose-description': 'Achieve "online restoration," "lifetime maintenance-free operation," and "continuous compliance with standards" for heat transfer systems, fundamentally solving safety, energy consumption, and environmental issues caused by oil aging.',
+                'purpose-card1-title': 'Online Restoration',
+                'purpose-card1-text': 'Achieve purification without production interruption',
+                'purpose-card2-title': 'Lifetime Maintenance-Free',
+                'purpose-card2-text': 'Balance degradation byproducts, eliminate oil changes',
+                'purpose-card3-title': 'Energy Savings',
+                'purpose-card3-text': 'Improve thermal efficiency, reduce energy consumption',
+                'purpose-card4-title': 'Continuous Compliance',
+                'purpose-card4-text': 'Maintain oil quality standards consistently',
+
+                // 技术方案
+                'technology-title': 'Green Technology Solution',
+                'technology-advantages-label': 'Core Advantages:',
+                'technology-advantages': '【Low Emission | Low Energy Consumption | Physical Process | Circular Economy】',
+                'tech-step1-title': 'Deacidification & Degumming',
+                'tech-step1-desc': 'Effectively removes gums, asphaltenes, and acidic contaminants to prevent coking and extend equipment life.',
+                'tech-step2-title': 'Online Light Fraction Removal',
+                'tech-step2-desc': 'Removes light fractions without shutdown, improving flash point and heat transfer while preventing vapor lock and cavitation.',
+                'tech-step3-title': 'Physical Purification Technology',
+                'tech-step3-desc': 'Utilizes flocculation adsorption and separation technology with minimal oil loss.',
+                'tech-step4-title': 'Circular Economy Model',
+                'tech-step4-desc': 'Restored oil exceeds national standards, achieving resource circularity.',
+
+                // 技术表格
+                'tech-comparison-title': 'Technical Performance Comparison',
+                'scroll-hint': 'Scroll horizontally',
+                'table-parameter': 'Parameter',
+                'table-original': 'Original Oil',
+                'table-deacid': 'After Deacidification',
+                'table-light-removal': 'After Light Fraction Removal',
+                'table-purification': 'After Purification',
+                'table-acid-value': 'Acid Value (mgKOH/g)',
+                'table-carbon-residue': 'Carbon Residue (%)',
+                'table-flash-point': 'Flash Point (℃)',
+                'table-note': 'Note: Lower acid value and carbon residue are better; higher flash point and thermal efficiency are better',
+
+                // 经济效益
+                'economic-title': 'Economic Benefits',
+                'economic-description': 'Significant economic and environmental benefits demonstrated in chemical industry applications:',
+                'economic-stat1': 'Saved on new oil',
+                'economic-stat2': 'Saved on downtime',
+                'economic-stat3': 'Energy reduction',
+                'economic-stat4': 'Total savings',
+                'economic-comparison-title': 'Before vs After Retrofit',
+
+                // 联系表单
+                'contact-title': 'Contact Us',
+                'contact-solution-title': 'Get Solution & Quotation',
+                'contact-solution-desc': 'Contact us for a customized solution.',
+                'contact-address': 'No. 106 Fengze East Road, Nansha District, Guangzhou, China',
+                'contact-form-title': 'Send Inquiry',
+                'form-name-placeholder': 'Your Name',
+                'form-phone-placeholder': 'Contact Phone',
+                'form-email-placeholder': 'Email Address',
+                'form-message-placeholder': 'Your Requirements',
+                'form-submit-btn': 'Submit Inquiry',
+                'footer-copyright': '© 2023 All Rights Reserved',
+                'footer-slogan': 'Green Production · Circular Economy · Sustainable Development',
+
+                // 环保效益
+                'environmental-title': 'Environmental Impact',
+                'env-card1-title': 'Reduce Waste Oil',
+                'env-card1-text': 'Lifetime maintenance-free operation minimizes waste oil generation and improper disposal risks.',
+                'env-card1-value': '250+ tons waste oil reduced',
+                'env-card2-title': 'Lower Energy Consumption',
+                'env-card2-text': '10-20% improvement in heat transfer efficiency reduces fuel consumption and emissions.',
+                'env-card2-value': '500 tons CO₂ reduced annually',
+                'env-card3-title': 'Resource Circularity',
+                'env-card3-text': 'Oil recycling maximizes resource utilization and reduces environmental burden of new oil production.',
+                'env-card3-value': '95% resource utilization',
+                'env-card4-title': 'Green Production',
+                'env-card4-text': 'Supporting sustainable manufacturing',
+                'env-certification-title': 'Supporting Green Factory Certification',
+                'env-certification-desc': 'Our solution aligns with national green manufacturing standards and environmental policies:',
+                'env-benefit1': 'Meet environmental compliance requirements for industrial oils',
+                'env-benefit2': 'Reduce hazardous waste disposal costs and environmental risks',
+                'env-benefit3': 'Enhance green manufacturing credentials and market competitiveness',
+                'env-benefit4': 'Contribute to carbon neutrality goals and national climate strategy',
+
+                // 实施计划
+                'implementation-title': 'Implementation Plan',
+                'impl-step1-title': 'Assessment & Testing',
+                'impl-step1-desc': 'Conduct environmental testing and experiments on oil samples to develop a customized green restoration plan.',
+                'impl-step1-duration': 'Duration: 1 week',
+                'impl-step2-title': 'Equipment Customization',
+                'impl-step2-desc': 'Design low-energy, zero-emission purification equipment that meets environmental standards.',
+                'impl-step2-duration': 'Duration: 3-4 weeks',
+                'impl-step3-title': 'Installation & Commissioning',
+                'impl-step3-desc': 'Professional installation with zero pollution, system integration, and environmental performance testing.',
+                'impl-step3-duration': 'Duration: 3-5 days (no shutdown)',
+                'impl-step4-title': 'Maintenance Service',
+                'impl-step4-desc': 'Provide environmental monitoring, energy efficiency assessment, and maintenance to ensure optimal performance.',
+                'impl-step4-duration': 'Duration: Lifetime service',
+                'impl-cta': 'Request Solution Details',
+
+                // 表单验证消息
+                'form-validation-error': 'Please enter your name and contact phone number',
+                'form-success-message': 'Your inquiry has been submitted. Our green technology consultant will contact you shortly!',
+
+                // 油品对比
+                'oil-comparison-title': 'Oil Appearance Before & After Retrofit',
+                'oil-before-label': 'Before Retrofit',
+                'oil-after-label': 'After Retrofit',
+                'oil-issues-title': 'Issues',
+                'oil-issue1': 'Dark color, opaque',
+                'oil-issue2': 'Containing gums and wall sludge',
+                'oil-issue3': 'High viscosity, poor flow',
+                'oil-improvements-title': 'Improvements',
+                'oil-improvement1': 'Transparent color, like new oil',
+                'oil-improvement2': 'No gums or suspended matter',
+                'oil-improvement3': 'Normal viscosity, good fluidity',
+                'oil-note': 'Note: Images are for illustration purposes; actual results may vary'
+            },
+            ru: {
+                // 页面标题和元标签
+                'page-title': 'Решение для модернизации системы теплоносителя с пожизненным обслуживанием',
+                'og-title': 'Система теплоносителя с пожизненным обслуживанием',
+                'og-description': 'Достижение онлайн-восстановления и пожизненной безремонтной эксплуатации систем теплопередачи, решение проблем старения при экономии энергии и снижении затрат.',
+                'twitter-title': 'Система теплоносителя с пожизненным обслуживанием',
+                'twitter-description': 'Достижение онлайн-восстановления и пожизненной безремонтной эксплуатации систем теплопередачи, решение проблем старения при экономии энергии и снижении затрат.',
+
+                // 导航栏
+                'nav-brand': 'Решения для теплоносителей',
+                'nav-purpose': 'Цель решения',
+                'nav-technology': 'Технология',
+                'nav-economic': 'Экономические выгоды',
+                'nav-cases': 'Кейсы',
+                'nav-environmental': 'Экологическое воздействие',
+                'nav-implementation': 'Внедрение',
+                'nav-contact': 'Связаться с нами',
+
+                // 头部横幅
+                'header-title': 'Решение для модернизации системы теплоносителя',
+                'header-subtitle': 'Онлайн-восстановление · Пожизненное обслуживание',
+                'header-cta': 'Навсегда решить проблемы старения теплоносителя',
+
+                // 方案目的
+                'purpose-title': 'Цель решения',
+                'purpose-description': 'Достижение "онлайн-восстановления", "пожизненной безремонтной эксплуатации" и "постоянного соответствия стандартам" для систем теплопередачи, кардинально решая проблемы безопасности, энергопотребления и экологии, вызванные старением масла.',
+                'purpose-card1-title': 'Онлайн-восстановление',
+                'purpose-card1-text': 'Очистка без остановки производства',
+                'purpose-card2-title': 'Пожизненное обслуживание',
+                'purpose-card2-text': 'Баланс продуктов деградации, исключение замены масла',
+                'purpose-card3-title': 'Энергосбережение',
+                'purpose-card3-text': 'Повышение тепловой эффективности, снижение энергопотребления',
+                'purpose-card4-title': 'Постоянное соответствие',
+                'purpose-card4-text': 'Постоянное поддержание стандартов качества масла',
+
+                // 技术方案
+                'technology-title': 'Зеленое технологическое решение',
+                'technology-advantages-label': 'Основные преимущества:',
+                'technology-advantages': '【Низкие выбросы | Низкое энергопотребление | Физический процесс | Циркулярная экономика】',
+                'tech-step1-title': 'Деацидификация и дегуммирование',
+                'tech-step1-desc': 'Эффективно удаляет смолы, асфальтены и кислотные загрязнения для предотвращения коксования и продления срока службы оборудования.',
+                'tech-step2-title': 'Онлайн-удаление легких фракций',
+                'tech-step2-desc': 'Удаляет легкие фракции без остановки, улучшая температуру вспышки и теплопередачу, предотвращая паровые пробки и кавитацию.',
+                'tech-step3-title': 'Технология физической очистки',
+                'tech-step3-desc': 'Использует технологию флокуляционной адсорбции и разделения с минимальными потерями масла.',
+                'tech-step4-title': 'Модель циркулярной экономики',
+                'tech-step4-desc': 'Восстановленное масло превышает национальные стандарты, достигая циркулярности ресурсов.',
+
+                // 技术表格
+                'tech-comparison-title': 'Сравнение технических характеристик',
+                'scroll-hint': 'Прокрутите горизонтально',
+                'table-parameter': 'Параметр',
+                'table-original': 'Исходное масло',
+                'table-deacid': 'После деацидификации',
+                'table-light-removal': 'После удаления легких фракций',
+                'table-purification': 'После очистки',
+                'table-acid-value': 'Кислотное число (мгKOH/г)',
+                'table-carbon-residue': 'Коксовый остаток (%)',
+                'table-flash-point': 'Температура вспышки (℃)',
+                'table-note': 'Примечание: Меньшие значения кислотного числа и коксового остатка лучше; более высокие температура вспышки и тепловая эффективность лучше',
+
+                // 经济效益
+                'economic-title': 'Экономические выгоды',
+                'economic-description': 'Значительные экономические и экологические выгоды, продемонстрированные в применении химической промышленности:',
+                'economic-stat1': 'Экономия на новом масле',
+                'economic-stat2': 'Экономия на простоях',
+                'economic-stat3': 'Снижение энергопотребления',
+                'economic-stat4': 'Общая экономия',
+                'economic-comparison-title': 'До и после модернизации',
+
+                // 联系表单
+                'contact-title': 'Связаться с нами',
+                'contact-solution-title': 'Получить решение и расценки',
+                'contact-solution-desc': 'Свяжитесь с нами для индивидуального решения.',
+                'contact-address': 'ул. Фэнцзэ Восточная, 106, район Наньша, Гуанчжоу, Китай',
+                'contact-form-title': 'Отправить запрос',
+                'form-name-placeholder': 'Ваше имя',
+                'form-phone-placeholder': 'Контактный телефон',
+                'form-email-placeholder': 'Адрес электронной почты',
+                'form-message-placeholder': 'Ваши требования',
+                'form-submit-btn': 'Отправить запрос',
+                'footer-copyright': '© 2023 Все права защищены',
+                'footer-slogan': 'Зеленое производство · Циркулярная экономика · Устойчивое развитие',
+
+                // 环保效益
+                'environmental-title': 'Экологическое воздействие',
+                'env-card1-title': 'Сокращение отработанного масла',
+                'env-card1-text': 'Пожизненная безремонтная эксплуатация минимизирует образование отработанного масла и риски неправильной утилизации.',
+                'env-card1-value': 'Сокращено 250+ тонн отработанного масла',
+                'env-card2-title': 'Снижение энергопотребления',
+                'env-card2-text': 'Улучшение эффективности теплопередачи на 10-20% снижает расход топлива и выбросы.',
+                'env-card2-value': '500 тонн CO₂ сокращено ежегодно',
+                'env-card3-title': 'Циркулярность ресурсов',
+                'env-card3-text': 'Переработка масла максимизирует использование ресурсов и снижает экологическую нагрузку производства нового масла.',
+                'env-card3-value': '95% использование ресурсов',
+                'env-card4-title': 'Зеленое производство',
+                'env-card4-text': 'Поддержка устойчивого производства',
+                'env-certification-title': 'Поддержка сертификации зеленого завода',
+                'env-certification-desc': 'Наше решение соответствует национальным стандартам зеленого производства и экологической политике:',
+                'env-benefit1': 'Соответствие экологическим требованиям для промышленных масел',
+                'env-benefit2': 'Снижение затрат на утилизацию опасных отходов и экологических рисков',
+                'env-benefit3': 'Повышение репутации зеленого производства и конкурентоспособности на рынке',
+                'env-benefit4': 'Вклад в цели углеродной нейтральности и национальную климатическую стратегию',
+
+                // 实施计划
+                'implementation-title': 'План внедрения',
+                'impl-step1-title': 'Оценка и тестирование',
+                'impl-step1-desc': 'Проведение экологического тестирования и экспериментов с образцами масла для разработки индивидуального плана зеленого восстановления.',
+                'impl-step1-duration': 'Продолжительность: 1 неделя',
+                'impl-step2-title': 'Настройка оборудования',
+                'impl-step2-desc': 'Проектирование низкоэнергетического, безэмиссионного очистительного оборудования, соответствующего экологическим стандартам.',
+                'impl-step2-duration': 'Продолжительность: 3-4 недели',
+                'impl-step3-title': 'Установка и ввод в эксплуатацию',
+                'impl-step3-desc': 'Профессиональная установка без загрязнения, системная интеграция и тестирование экологических характеристик.',
+                'impl-step3-duration': 'Продолжительность: 3-5 дней (без остановки)',
+                'impl-step4-title': 'Сервисное обслуживание',
+                'impl-step4-desc': 'Обеспечение экологического мониторинга, оценки энергоэффективности и обслуживания для обеспечения оптимальной производительности.',
+                'impl-step4-duration': 'Продолжительность: Пожизненное обслуживание',
+                'impl-cta': 'Запросить детали решения',
+
+                // 表单验证消息
+                'form-validation-error': 'Пожалуйста, введите ваше имя и контактный телефон',
+                'form-success-message': 'Ваш запрос отправлен. Наш консультант по зеленым технологиям свяжется с вами в ближайшее время!',
+
+                // 油品对比
+                'oil-comparison-title': 'Внешний вид масла до и после модернизации',
+                'oil-before-label': 'До модернизации',
+                'oil-after-label': 'После модернизации',
+                'oil-issues-title': 'Проблемы',
+                'oil-issue1': 'Темный цвет, непрозрачное',
+                'oil-issue2': 'Содержит смолы и отложения на стенках',
+                'oil-issue3': 'Высокая вязкость, плохая текучесть',
+                'oil-improvements-title': 'Улучшения',
+                'oil-improvement1': 'Прозрачный цвет, как новое масло',
+                'oil-improvement2': 'Без смол и взвешенных веществ',
+                'oil-improvement3': 'Нормальная вязкость, хорошая текучесть',
+                'oil-note': 'Примечание: Изображения приведены для иллюстрации; фактические результаты могут отличаться'
+            }
+        };
+
+        // 当前语言
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        // 翻译函数
+        function translatePage(language) {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    if (element.hasAttribute('data-translate-attr')) {
+                        const attr = element.getAttribute('data-translate-attr');
+                        element.setAttribute(attr, translations[language][key]);
+                    } else {
+                        element.textContent = translations[language][key];
+                    }
+                }
+            });
+
+            // 翻译placeholder
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.setAttribute('placeholder', translations[language][key]);
+                }
+            });
+
+            // 更新页面标题
+            if (translations[language]['page-title']) {
+                document.title = translations[language]['page-title'];
+            }
+
+            // 更新HTML lang属性
+            document.documentElement.lang = language;
+        }
+
+        // 更新语言切换器显示
+        function updateLanguageSwitcher(language) {
+            const button = document.getElementById('languageButton');
+            const dropdown = document.getElementById('languageDropdown');
+
+            if (button) {
+                const flag = button.querySelector('.flag');
+                if (flag) {
+                    flag.textContent = language === 'ru' ? '🇷🇺' : '🇺🇸';
+                }
+            }
+
+            if (dropdown) {
+                const options = dropdown.querySelectorAll('.language-option');
+                options.forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('data-lang') === language) {
+                        option.classList.add('active');
+                    }
+                });
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
+            // 初始化语言
+            translatePage(currentLanguage);
+            updateLanguageSwitcher(currentLanguage);
+
+            // 语言切换器事件
+            const languageButton = document.getElementById('languageButton');
+            const languageDropdown = document.getElementById('languageDropdown');
+
+            if (languageButton && languageDropdown) {
+                languageButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageDropdown.classList.toggle('show');
+                });
+
+                languageDropdown.addEventListener('click', function(e) {
+                    const option = e.target.closest('.language-option');
+                    if (option) {
+                        const newLanguage = option.getAttribute('data-lang');
+                        if (newLanguage !== currentLanguage) {
+                            currentLanguage = newLanguage;
+                            localStorage.setItem('language', newLanguage);
+                            translatePage(newLanguage);
+                            updateLanguageSwitcher(newLanguage);
+                        }
+                        languageDropdown.classList.remove('show');
+                    }
+                });
+            }
+
+            // 点击外部关闭下拉菜单
+            document.addEventListener('click', function() {
+                if (languageDropdown) {
+                    languageDropdown.classList.remove('show');
+                }
+            });
+
             // 导航菜单切换
             document.getElementById('menuToggle').addEventListener('click', function() {
                 const mobileMenu = document.getElementById('mobileMenu');
@@ -1305,13 +1802,15 @@
                     e.preventDefault();
                     const name = document.getElementById('name').value;
                     const phone = document.getElementById('phone').value;
-                    
+
                     if (!name || !phone) {
-                        alert('Please enter your name and contact phone number');
+                        const errorMsg = translations[currentLanguage]['form-validation-error'] || 'Please enter your name and contact phone number';
+                        alert(errorMsg);
                         return;
                     }
-                    
-                    alert('Your inquiry has been submitted. Our green technology consultant will contact you shortly!');
+
+                    const successMsg = translations[currentLanguage]['form-success-message'] || 'Your inquiry has been submitted. Our green technology consultant will contact you shortly!';
+                    alert(successMsg);
                     contactForm.reset();
                 });
             }
