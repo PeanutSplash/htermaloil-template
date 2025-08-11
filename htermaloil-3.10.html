@@ -537,12 +537,29 @@
         @media (max-width: 768px) {
             .language-switcher {
                 top: 15px;
-                right: 15px;
+                right: 70px; /* 移动到菜单按钮左侧，避免重合 */
+                transition: all 0.3s ease; /* 添加过渡动画 */
             }
             .language-button {
-                width: 42px;
-                height: 42px;
-                font-size: 18px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            /* 当移动端菜单展开时，调整语言选择器位置 */
+            .mobile-menu-open .language-switcher {
+                top: 80px; /* 移动到导航栏下方 */
+                right: 15px;
+                z-index: 1001; /* 确保在菜单之上 */
+            }
+            /* 在移动端菜单展开时，调整下拉菜单的显示 */
+            .mobile-menu-open .language-dropdown {
+                top: 100%;
+                right: 0;
+                margin-top: 5px;
+            }
+            /* 优化语言选择器按钮的提示文字 */
+            .language-button::after {
+                display: none; /* 在移动端隐藏提示文字 */
             }
         }
     </style>
@@ -1732,6 +1749,9 @@
             document.getElementById('menuToggle').addEventListener('click', function() {
                 const mobileMenu = document.getElementById('mobileMenu');
                 mobileMenu.classList.toggle('hidden');
+
+                // 切换body类来控制语言选择器位置
+                document.body.classList.toggle('mobile-menu-open');
             });
             
             // 平滑滚动
@@ -1741,6 +1761,7 @@
                     
                     // 关闭移动菜单
                     document.getElementById('mobileMenu').classList.add('hidden');
+                    document.body.classList.remove('mobile-menu-open');
                     
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
