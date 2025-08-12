@@ -19,6 +19,7 @@
     <meta name="language" content="en">
     <link rel="alternate" hreflang="en" href="https://peanutsplash.github.io/htermaloil-template/htermaloil-3.10.html">
     <link rel="alternate" hreflang="ru" href="https://peanutsplash.github.io/htermaloil-template/htermaloil-3.10.html">
+    <link rel="alternate" hreflang="zh" href="https://peanutsplash.github.io/htermaloil-template/htermaloil-3.10.html">
     <link rel="alternate" hreflang="x-default" href="https://peanutsplash.github.io/htermaloil-template/htermaloil-3.10.html">
 
     <!-- 社交媒体分享元标签 -->
@@ -514,7 +515,7 @@
             transform: scale(1.1);
         }
         .language-button::after {
-            content: 'Language / Язык';
+            content: 'Language / Язык / 语言';
             position: absolute;
             bottom: -35px;
             right: 0;
@@ -621,7 +622,7 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "sales",
-            "availableLanguage": ["English", "Russian"]
+            "availableLanguage": ["English", "Russian", "Chinese"]
         },
         "sameAs": []
     }
@@ -776,6 +777,10 @@
             <div class="language-option" data-lang="ru">
                 <span class="flag">🇷🇺</span>
                 <span>Русский</span>
+            </div>
+            <div class="language-option" data-lang="zh">
+                <span class="flag">🇨🇳</span>
+                <span>中文</span>
             </div>
         </div>
     </div>
@@ -1043,39 +1048,39 @@
                                 <div class="w-8 h-8 rounded-full bg-danger flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-exclamation-triangle"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-danger">Before Retrofit</h4>
+                                <h4 class="font-bold text-base text-danger" data-translate="comparison-before">Before Retrofit</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">Acid Value Exceeded</span>
-                                <p class="text-xs">High acid value increased coking risk significantly</p>
+                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1" data-translate="comparison1-before-label">Acid Value Exceeded</span>
+                                <p class="text-xs" data-translate="comparison1-before-desc">High acid value increased coking risk significantly</p>
                             </div>
                         </div>
-                        
+
                         <!-- After -->
                         <div class="p-4 bg-green-50">
                             <div class="flex items-center mb-2">
                                 <div class="w-8 h-8 rounded-full bg-success flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-success">After Retrofit</h4>
+                                <h4 class="font-bold text-base text-success" data-translate="comparison-after">After Retrofit</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">No Coking</span>
-                                <p class="text-xs">Acid value normalized, eliminating coking issues</p>
+                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1" data-translate="comparison1-after-label">No Coking</span>
+                                <p class="text-xs" data-translate="comparison1-after-desc">Acid value normalized, eliminating coking issues</p>
                             </div>
                         </div>
-                        
+
                         <!-- Effect -->
                         <div class="p-4 bg-primary/5">
                             <div class="flex items-center mb-2">
                                 <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-primary">Economic Impact</h4>
+                                <h4 class="font-bold text-base text-primary" data-translate="comparison-impact">Economic Impact</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <p class="text-xs font-semibold">Saved $400K on oil replacement</p>
-                                <p class="text-gray-600 text-xs mt-1">Avoided system maintenance costs</p>
+                                <p class="text-xs font-semibold" data-translate="comparison1-impact-main">Saved $400K on oil replacement</p>
+                                <p class="text-gray-600 text-xs mt-1" data-translate="comparison1-impact-sub">Avoided system maintenance costs</p>
                             </div>
                         </div>
                     </div>
@@ -1090,39 +1095,39 @@
                                 <div class="w-8 h-8 rounded-full bg-danger flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-exclamation-triangle"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-danger">Before Retrofit</h4>
+                                <h4 class="font-bold text-base text-danger" data-translate="comparison-before">Before Retrofit</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">High Carbon Residue</span>
-                                <p class="text-xs">Accumulated carbon reduced heat transfer efficiency</p>
+                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1" data-translate="comparison2-before-label">High Carbon Residue</span>
+                                <p class="text-xs" data-translate="comparison2-before-desc">Accumulated carbon reduced heat transfer efficiency</p>
                             </div>
                         </div>
-                        
+
                         <!-- After -->
                         <div class="p-4 bg-green-50">
                             <div class="flex items-center mb-2">
                                 <div class="w-8 h-8 rounded-full bg-success flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-success">After Retrofit</h4>
+                                <h4 class="font-bold text-base text-success" data-translate="comparison-after">After Retrofit</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">No Cleaning Needed</span>
-                                <p class="text-xs">Carbon residue effectively removed without shutdown</p>
+                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1" data-translate="comparison2-after-label">No Cleaning Needed</span>
+                                <p class="text-xs" data-translate="comparison2-after-desc">Carbon residue effectively removed without shutdown</p>
                             </div>
                         </div>
-                        
+
                         <!-- Effect -->
                         <div class="p-4 bg-primary/5">
                             <div class="flex items-center mb-2">
                                 <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-primary">Economic Impact</h4>
+                                <h4 class="font-bold text-base text-primary" data-translate="comparison-impact">Economic Impact</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <p class="text-xs font-semibold">Saved $300K on downtime</p>
-                                <p class="text-gray-600 text-xs mt-1">Avoided production loss during maintenance</p>
+                                <p class="text-xs font-semibold" data-translate="comparison2-impact-main">Saved $300K on downtime</p>
+                                <p class="text-gray-600 text-xs mt-1" data-translate="comparison2-impact-sub">Avoided production loss during maintenance</p>
                             </div>
                         </div>
                     </div>
@@ -1137,39 +1142,39 @@
                                 <div class="w-8 h-8 rounded-full bg-danger flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-exclamation-triangle"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-danger">Before Retrofit</h4>
+                                <h4 class="font-bold text-base text-danger" data-translate="comparison-before">Before Retrofit</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">Low Thermal Efficiency</span>
-                                <p class="text-xs">System inefficiency increased energy consumption</p>
+                                <span class="inline-block bg-danger text-white px-2 py-1 rounded-full text-xs font-semibold mb-1" data-translate="comparison3-before-label">Low Thermal Efficiency</span>
+                                <p class="text-xs" data-translate="comparison3-before-desc">System inefficiency increased energy consumption</p>
                             </div>
                         </div>
-                        
+
                         <!-- After -->
                         <div class="p-4 bg-green-50">
                             <div class="flex items-center mb-2">
                                 <div class="w-8 h-8 rounded-full bg-success flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-success">After Retrofit</h4>
+                                <h4 class="font-bold text-base text-success" data-translate="comparison-after">After Retrofit</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1">High Efficiency</span>
-                                <p class="text-xs">Reduced temperature difference, improved heat transfer</p>
+                                <span class="inline-block bg-success text-white px-2 py-1 rounded-full text-xs font-semibold mb-1" data-translate="comparison3-after-label">High Efficiency</span>
+                                <p class="text-xs" data-translate="comparison3-after-desc">Reduced temperature difference, improved heat transfer</p>
                             </div>
                         </div>
-                        
+
                         <!-- Effect -->
                         <div class="p-4 bg-primary/5">
                             <div class="flex items-center mb-2">
                                 <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white mr-2">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
-                                <h4 class="font-bold text-base text-primary">Economic Impact</h4>
+                                <h4 class="font-bold text-base text-primary" data-translate="comparison-impact">Economic Impact</h4>
                             </div>
                             <div class="bg-white/80 rounded-lg p-2 shadow-sm">
-                                <p class="text-xs font-semibold">Energy reduced by 10-20%</p>
-                                <p class="text-gray-600 text-xs mt-1">Significant annual energy cost savings</p>
+                                <p class="text-xs font-semibold" data-translate="comparison3-impact-main">Energy reduced by 10-20%</p>
+                                <p class="text-gray-600 text-xs mt-1" data-translate="comparison3-impact-sub">Significant annual energy cost savings</p>
                             </div>
                         </div>
                     </div>
@@ -1181,119 +1186,119 @@
         <section id="cases" class="mb-10 bg-white rounded-xl shadow-lg p-6 md:p-8 section-fade-in">
             <h2 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-4 flex items-center">
                 <i class="fas fa-building bg-primary text-accent w-10 h-10 rounded-full flex items-center justify-center mr-4"></i>
-                Client Applications
+                <span data-translate="cases-title">Client Applications</span>
             </h2>
-            
+
             <div class="mb-8">
-                <h3 class="text-xl font-bold text-primary mb-4">Industry Applications</h3>
+                <h3 class="text-xl font-bold text-primary mb-4" data-translate="cases-industry-title">Industry Applications</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                     <!-- Industry 1 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Plastics & Fibers</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry1-title">Plastics & Fibers</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Reaction Kettles</li>
-                            <li>Fractionation Towers</li>
+                            <li class="mb-0.5" data-translate="industry1-app1">Reaction Kettles</li>
+                            <li data-translate="industry1-app2">Fractionation Towers</li>
                         </ul>
                     </div>
-                    
+
                     <!-- Industry 2 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Chemical & Petrochemical</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry2-title">Chemical & Petrochemical</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Reactors</li>
-                            <li>Distillation Columns</li>
+                            <li class="mb-0.5" data-translate="industry2-app1">Reactors</li>
+                            <li data-translate="industry2-app2">Distillation Columns</li>
                         </ul>
                     </div>
-                    
+
                     <!-- Industry 3 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Textiles</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry3-title">Textiles</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Fiber Melting</li>
-                            <li>Board Presses</li>
+                            <li class="mb-0.5" data-translate="industry3-app1">Fiber Melting</li>
+                            <li data-translate="industry3-app2">Board Presses</li>
                         </ul>
                     </div>
                     
                     <!-- Industry 4 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">New Energy Materials</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry4-title">New Energy Materials</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Polysilicon Growth</li>
-                            <li>Battery Electrode Drying</li>
+                            <li class="mb-0.5" data-translate="industry4-app1">Polysilicon Growth</li>
+                            <li data-translate="industry4-app2">Battery Electrode Drying</li>
                         </ul>
                     </div>
-                    
+
                     <!-- Industry 5 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Food & Pharma</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry5-title">Food & Pharma</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Baking Equipment</li>
-                            <li>Aseptic Drying</li>
+                            <li class="mb-0.5" data-translate="industry5-app1">Baking Equipment</li>
+                            <li data-translate="industry5-app2">Aseptic Drying</li>
                         </ul>
                     </div>
-                    
+
                     <!-- Industry 6 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Building Materials</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry6-title">Building Materials</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Asphalt Melting</li>
-                            <li>Gypsum Board Drying</li>
+                            <li class="mb-0.5" data-translate="industry6-app1">Asphalt Melting</li>
+                            <li data-translate="industry6-app2">Gypsum Board Drying</li>
                         </ul>
                     </div>
-                    
+
                     <!-- Industry 7 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Paper & Textile</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry7-title">Paper & Textile</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Heat Setting</li>
-                            <li>Paper Drying</li>
+                            <li class="mb-0.5" data-translate="industry7-app1">Heat Setting</li>
+                            <li data-translate="industry7-app2">Paper Drying</li>
                         </ul>
                     </div>
-                    
+
                     <!-- Industry 8 -->
                     <div class="bg-white rounded-lg p-2 shadow-sm border border-gray-100 h-full flex flex-col">
-                        <div class="text-primary font-bold text-xs mb-1">Metal Processing</div>
+                        <div class="text-primary font-bold text-xs mb-1" data-translate="industry8-title">Metal Processing</div>
                         <ul class="text-[10px] ml-3 list-disc text-gray-600 flex-grow">
-                            <li class="mb-0.5">Quenching & Tempering</li>
-                            <li>Degreasing & Plating</li>
+                            <li class="mb-0.5" data-translate="industry8-app1">Quenching & Tempering</li>
+                            <li data-translate="industry8-app2">Degreasing & Plating</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="mb-8">
-                <h3 class="text-xl font-bold text-primary mb-4">Case Studies</h3>
+                <h3 class="text-xl font-bold text-primary mb-4" data-translate="cases-studies-title">Case Studies</h3>
                 
                 <!-- Case 1 -->
                 <div class="case-card-mobile">
                     <div class="case-header-mobile">
-                        <i class="fas fa-oil-well mr-2"></i> PCB Manufacturer Retrofit
+                        <i class="fas fa-oil-well mr-2"></i> <span data-translate="case1-title">PCB Manufacturer Retrofit</span>
                     </div>
                     <div class="case-body-mobile">
-                        <p class="mb-3 text-sm">A PCB manufacturer faced severe coking issues causing poor heat transfer and increased defect rates.</p>
-                        <p class="font-semibold text-primary text-sm">Solution:</p>
+                        <p class="mb-3 text-sm" data-translate="case1-problem">A PCB manufacturer faced severe coking issues causing poor heat transfer and increased defect rates.</p>
+                        <p class="font-semibold text-primary text-sm" data-translate="case-solution-label">Solution:</p>
                         <ul class="text-xs mb-4 pl-4 list-disc">
-                            <li class="mb-1">Implemented online deacidification technology</li>
-                            <li class="mb-1">Installed purification system for maintenance-free operation</li>
-                            <li class="mb-1">Gradual removal of wall sludge and coke deposits</li>
-                            <li>Restored flash point, acid value, and carbon residue</li>
+                            <li class="mb-1" data-translate="case1-solution1">Implemented online deacidification technology</li>
+                            <li class="mb-1" data-translate="case1-solution2">Installed purification system for maintenance-free operation</li>
+                            <li class="mb-1" data-translate="case1-solution3">Gradual removal of wall sludge and coke deposits</li>
+                            <li data-translate="case1-solution4">Restored flash point, acid value, and carbon residue</li>
                         </ul>
                         <div class="case-stats-mobile">
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">$400K+</div>
-                                <div class="stat-label-mobile">Cost Savings</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-cost">Cost Savings</div>
                             </div>
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">18%</div>
-                                <div class="stat-label-mobile">Energy Reduction</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-energy">Energy Reduction</div>
                             </div>
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">0 Changes</div>
-                                <div class="stat-label-mobile">Oil Replacement</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-oil">Oil Replacement</div>
                             </div>
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">320 tons</div>
-                                <div class="stat-label-mobile">CO₂ Reduction</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-co2">CO₂ Reduction</div>
                             </div>
                         </div>
                     </div>
@@ -1302,33 +1307,33 @@
                 <!-- Case 2 -->
                 <div class="case-card-mobile">
                     <div class="case-header-mobile">
-                        <i class="fas fa-industry mr-2"></i> Chemical Plant Green Transformation
+                        <i class="fas fa-industry mr-2"></i> <span data-translate="case2-title">Chemical Plant Green Transformation</span>
                     </div>
                     <div class="case-body-mobile">
-                        <p class="mb-3 text-sm">A chemical plant received shutdown notice for 200 tons of degraded heat transfer oil.</p>
-                        <p class="font-semibold text-primary text-sm">Solution:</p>
+                        <p class="mb-3 text-sm" data-translate="case2-problem">A chemical plant received shutdown notice for 200 tons of degraded heat transfer oil.</p>
+                        <p class="font-semibold text-primary text-sm" data-translate="case-solution-label">Solution:</p>
                         <ul class="text-xs mb-4 pl-4 list-disc">
-                            <li class="mb-1">Online purification to restore oil quality</li>
-                            <li class="mb-1">Flocculation to normalize acid value</li>
-                            <li class="mb-1">Adsorption filtration to remove oxides</li>
-                            <li>Online light fraction removal to restore flash point</li>
+                            <li class="mb-1" data-translate="case2-solution1">Online purification to restore oil quality</li>
+                            <li class="mb-1" data-translate="case2-solution2">Flocculation to normalize acid value</li>
+                            <li class="mb-1" data-translate="case2-solution3">Adsorption filtration to remove oxides</li>
+                            <li data-translate="case2-solution4">Online light fraction removal to restore flash point</li>
                         </ul>
                         <div class="case-stats-mobile">
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">$280K+</div>
-                                <div class="stat-label-mobile">Cost Savings</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-cost">Cost Savings</div>
                             </div>
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">22%</div>
-                                <div class="stat-label-mobile">Energy Reduction</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-energy">Energy Reduction</div>
                             </div>
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">95%</div>
-                                <div class="stat-label-mobile">Waste Reduction</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-waste">Waste Reduction</div>
                             </div>
                             <div class="stat-item-mobile">
                                 <div class="stat-value-mobile">250 tons</div>
-                                <div class="stat-label-mobile">CO₂ Reduction</div>
+                                <div class="stat-label-mobile" data-translate="case-stat-co2">CO₂ Reduction</div>
                             </div>
                         </div>
                     </div>
@@ -1611,6 +1616,29 @@
                 'economic-stat4': 'Total savings',
                 'economic-comparison-title': 'Before vs After Retrofit',
 
+                // 改造前后对比
+                'comparison-before': 'Before Retrofit',
+                'comparison-after': 'After Retrofit',
+                'comparison-impact': 'Economic Impact',
+                'comparison1-before-label': 'Acid Value Exceeded',
+                'comparison1-before-desc': 'High acid value increased coking risk significantly',
+                'comparison1-after-label': 'No Coking',
+                'comparison1-after-desc': 'Acid value normalized, eliminating coking issues',
+                'comparison1-impact-main': 'Saved $400K on oil replacement',
+                'comparison1-impact-sub': 'Avoided system maintenance costs',
+                'comparison2-before-label': 'High Carbon Residue',
+                'comparison2-before-desc': 'Accumulated carbon reduced heat transfer efficiency',
+                'comparison2-after-label': 'No Cleaning Needed',
+                'comparison2-after-desc': 'Carbon residue effectively removed without shutdown',
+                'comparison2-impact-main': 'Saved $300K on downtime',
+                'comparison2-impact-sub': 'Avoided production loss during maintenance',
+                'comparison3-before-label': 'Low Thermal Efficiency',
+                'comparison3-before-desc': 'System inefficiency increased energy consumption',
+                'comparison3-after-label': 'High Efficiency',
+                'comparison3-after-desc': 'Reduced temperature difference, improved heat transfer',
+                'comparison3-impact-main': 'Energy reduced by 10-20%',
+                'comparison3-impact-sub': 'Significant annual energy cost savings',
+
                 // 联系表单
                 'contact-title': 'Contact Us',
                 'contact-solution-title': 'Get Solution & Quotation',
@@ -1664,6 +1692,57 @@
                 // 表单验证消息
                 'form-validation-error': 'Please enter your name and contact phone number',
                 'form-success-message': 'Email client has been opened with pre-filled inquiry template. Please send the email to complete your inquiry!',
+
+                // 案例研究
+                'cases-title': 'Client Applications',
+                'cases-industry-title': 'Industry Applications',
+                'cases-studies-title': 'Case Studies',
+
+                // 行业应用
+                'industry1-title': 'Plastics & Fibers',
+                'industry1-app1': 'Reaction Kettles',
+                'industry1-app2': 'Fractionation Towers',
+                'industry2-title': 'Chemical & Petrochemical',
+                'industry2-app1': 'Reactors',
+                'industry2-app2': 'Distillation Columns',
+                'industry3-title': 'Textiles',
+                'industry3-app1': 'Fiber Melting',
+                'industry3-app2': 'Board Presses',
+                'industry4-title': 'New Energy Materials',
+                'industry4-app1': 'Polysilicon Growth',
+                'industry4-app2': 'Battery Electrode Drying',
+                'industry5-title': 'Food & Pharma',
+                'industry5-app1': 'Baking Equipment',
+                'industry5-app2': 'Aseptic Drying',
+                'industry6-title': 'Building Materials',
+                'industry6-app1': 'Asphalt Melting',
+                'industry6-app2': 'Gypsum Board Drying',
+                'industry7-title': 'Paper & Textile',
+                'industry7-app1': 'Heat Setting',
+                'industry7-app2': 'Paper Drying',
+                'industry8-title': 'Metal Processing',
+                'industry8-app1': 'Quenching & Tempering',
+                'industry8-app2': 'Degreasing & Plating',
+
+                // 案例研究详情
+                'case1-title': 'PCB Manufacturer Retrofit',
+                'case1-problem': 'A PCB manufacturer faced severe coking issues causing poor heat transfer and increased defect rates.',
+                'case-solution-label': 'Solution:',
+                'case1-solution1': 'Implemented online deacidification technology',
+                'case1-solution2': 'Installed purification system for maintenance-free operation',
+                'case1-solution3': 'Gradual removal of wall sludge and coke deposits',
+                'case1-solution4': 'Restored flash point, acid value, and carbon residue',
+                'case2-title': 'Chemical Plant Green Transformation',
+                'case2-problem': 'A chemical plant received shutdown notice for 200 tons of degraded heat transfer oil.',
+                'case2-solution1': 'Online purification to restore oil quality',
+                'case2-solution2': 'Flocculation to normalize acid value',
+                'case2-solution3': 'Adsorption filtration to remove oxides',
+                'case2-solution4': 'Online light fraction removal to restore flash point',
+                'case-stat-cost': 'Cost Savings',
+                'case-stat-energy': 'Energy Reduction',
+                'case-stat-oil': 'Oil Replacement',
+                'case-stat-waste': 'Waste Reduction',
+                'case-stat-co2': 'CO₂ Reduction',
 
                 // 油品对比
                 'oil-comparison-title': 'Oil Appearance Before & After Retrofit',
@@ -1749,6 +1828,29 @@
                 'economic-stat4': 'Общая экономия',
                 'economic-comparison-title': 'До и после модернизации',
 
+                // 改造前后对比
+                'comparison-before': 'До модернизации',
+                'comparison-after': 'После модернизации',
+                'comparison-impact': 'Экономический эффект',
+                'comparison1-before-label': 'Превышение кислотного числа',
+                'comparison1-before-desc': 'Высокое кислотное число значительно увеличило риск коксования',
+                'comparison1-after-label': 'Без коксования',
+                'comparison1-after-desc': 'Кислотное число нормализовано, проблемы коксования устранены',
+                'comparison1-impact-main': 'Экономия $400K на замене масла',
+                'comparison1-impact-sub': 'Избежание затрат на обслуживание системы',
+                'comparison2-before-label': 'Высокий коксовый остаток',
+                'comparison2-before-desc': 'Накопленный углерод снизил эффективность теплопередачи',
+                'comparison2-after-label': 'Очистка не требуется',
+                'comparison2-after-desc': 'Коксовый остаток эффективно удален без остановки',
+                'comparison2-impact-main': 'Экономия $300K на простоях',
+                'comparison2-impact-sub': 'Избежание потерь производства во время обслуживания',
+                'comparison3-before-label': 'Низкая тепловая эффективность',
+                'comparison3-before-desc': 'Неэффективность системы увеличила энергопотребление',
+                'comparison3-after-label': 'Высокая эффективность',
+                'comparison3-after-desc': 'Уменьшена разность температур, улучшена теплопередача',
+                'comparison3-impact-main': 'Энергопотребление снижено на 10-20%',
+                'comparison3-impact-sub': 'Значительная годовая экономия энергозатрат',
+
                 // 联系表单
                 'contact-title': 'Связаться с нами',
                 'contact-solution-title': 'Получить решение и расценки',
@@ -1803,6 +1905,57 @@
                 'form-validation-error': 'Пожалуйста, введите ваше имя и контактный телефон',
                 'form-success-message': 'Почтовый клиент открыт с предзаполненным шаблоном запроса. Пожалуйста, отправьте письмо для завершения запроса!',
 
+                // 案例研究
+                'cases-title': 'Применения клиентов',
+                'cases-industry-title': 'Отраслевые применения',
+                'cases-studies-title': 'Кейсы',
+
+                // 行业应用
+                'industry1-title': 'Пластики и волокна',
+                'industry1-app1': 'Реакционные котлы',
+                'industry1-app2': 'Ректификационные колонны',
+                'industry2-title': 'Химическая и нефтехимическая',
+                'industry2-app1': 'Реакторы',
+                'industry2-app2': 'Дистилляционные колонны',
+                'industry3-title': 'Текстиль',
+                'industry3-app1': 'Плавление волокон',
+                'industry3-app2': 'Прессы для плит',
+                'industry4-title': 'Новые энергетические материалы',
+                'industry4-app1': 'Выращивание поликремния',
+                'industry4-app2': 'Сушка электродов батарей',
+                'industry5-title': 'Пищевая и фармацевтическая',
+                'industry5-app1': 'Хлебопекарное оборудование',
+                'industry5-app2': 'Асептическая сушка',
+                'industry6-title': 'Строительные материалы',
+                'industry6-app1': 'Плавление асфальта',
+                'industry6-app2': 'Сушка гипсокартона',
+                'industry7-title': 'Бумага и текстиль',
+                'industry7-app1': 'Термофиксация',
+                'industry7-app2': 'Сушка бумаги',
+                'industry8-title': 'Обработка металлов',
+                'industry8-app1': 'Закалка и отпуск',
+                'industry8-app2': 'Обезжиривание и покрытие',
+
+                // 案例研究详情
+                'case1-title': 'Модернизация производителя печатных плат',
+                'case1-problem': 'Производитель печатных плат столкнулся с серьезными проблемами коксования, вызывающими плохую теплопередачу и увеличение брака.',
+                'case-solution-label': 'Решение:',
+                'case1-solution1': 'Внедрена технология онлайн-деацидификации',
+                'case1-solution2': 'Установлена система очистки для безремонтной эксплуатации',
+                'case1-solution3': 'Постепенное удаление отложений на стенках и коксовых отложений',
+                'case1-solution4': 'Восстановлены температура вспышки, кислотное число и коксовый остаток',
+                'case2-title': 'Зеленая трансформация химического завода',
+                'case2-problem': 'Химический завод получил уведомление об остановке из-за 200 тонн деградированного теплоносителя.',
+                'case2-solution1': 'Онлайн-очистка для восстановления качества масла',
+                'case2-solution2': 'Флокуляция для нормализации кислотного числа',
+                'case2-solution3': 'Адсорбционная фильтрация для удаления оксидов',
+                'case2-solution4': 'Онлайн-удаление легких фракций для восстановления температуры вспышки',
+                'case-stat-cost': 'Экономия затрат',
+                'case-stat-energy': 'Снижение энергопотребления',
+                'case-stat-oil': 'Замена масла',
+                'case-stat-waste': 'Сокращение отходов',
+                'case-stat-co2': 'Сокращение CO₂',
+
                 // 油品对比
                 'oil-comparison-title': 'Внешний вид масла до и после модернизации',
                 'oil-before-label': 'До модернизации',
@@ -1816,11 +1969,239 @@
                 'oil-improvement2': 'Без смол и взвешенных веществ',
                 'oil-improvement3': 'Нормальная вязкость, хорошая текучесть',
                 'oil-note': 'Примечание: Изображения приведены для иллюстрации; фактические результаты могут отличаться'
+            },
+            zh: {
+                // 页面标题和元标签
+                'page-title': '导热油系统改造解决方案 | 终身免维护 | 节能技术',
+                'meta-description': '专业导热油系统改造解决方案，提供在线修复、终身免维护运行和10-20%节能效果。适用于化工、制药和制造业的成熟技术。',
+                'meta-keywords': '导热油, 热油改造, 免维护系统, 节能, 在线修复, 化工行业, 脱酸, 脱胶, 热效率, 工业加热',
+                'og-title': '导热油系统改造 | 终身免维护解决方案',
+                'og-description': '专业导热油系统改造解决方案，提供在线修复、终身免维护运行和10-20%节能效果，适用于工业应用。',
+                'twitter-title': '导热油系统改造 | 终身免维护解决方案',
+                'twitter-description': '专业导热油系统改造解决方案，提供在线修复、终身免维护运行和10-20%节能效果。',
+
+                // 导航栏
+                'nav-brand': '导热油解决方案',
+                'nav-purpose': '方案目的',
+                'nav-technology': '技术方案',
+                'nav-economic': '经济效益',
+                'nav-cases': '案例研究',
+                'nav-environmental': '环保效益',
+                'nav-implementation': '实施计划',
+                'nav-contact': '联系我们',
+
+                // 头部横幅
+                'header-title': '导热油系统改造解决方案',
+                'header-subtitle': '在线修复 · 终身免维护',
+                'header-cta': '永久解决导热油老化问题',
+
+                // 方案目的
+                'purpose-title': '方案目的',
+                'purpose-description': '实现导热系统"在线修复"、"终身免维护"、"持续达标"，从根本上解决油品老化引起的安全、能耗、环保问题。',
+                'purpose-card1-title': '在线修复',
+                'purpose-card1-text': '不停产实现净化处理',
+                'purpose-card2-title': '终身免维护',
+                'purpose-card2-text': '平衡降解副产物，免换油',
+                'purpose-card3-title': '节能降耗',
+                'purpose-card3-text': '提高热效率，降低能耗',
+                'purpose-card4-title': '持续达标',
+                'purpose-card4-text': '持续保持油品质量标准',
+
+                // 技术方案
+                'technology-title': '绿色技术方案',
+                'technology-advantages-label': '核心优势：',
+                'technology-advantages': '【低排放 | 低能耗 | 物理工艺 | 循环经济】',
+                'tech-step1-title': '脱酸脱胶',
+                'tech-step1-desc': '有效去除胶质、沥青质和酸性污染物，防止结焦，延长设备寿命。',
+                'tech-step2-title': '在线轻组分脱除',
+                'tech-step2-desc': '不停机脱除轻组分，提高闪点和传热效果，防止气阻和汽蚀。',
+                'tech-step3-title': '物理净化技术',
+                'tech-step3-desc': '采用絮凝吸附分离技术，油品损失极小。',
+                'tech-step4-title': '循环经济模式',
+                'tech-step4-desc': '修复后油品超过国家标准，实现资源循环利用。',
+
+                // 技术表格
+                'tech-comparison-title': '技术性能对比',
+                'scroll-hint': '水平滑动查看',
+                'table-parameter': '参数',
+                'table-original': '原始油品',
+                'table-deacid': '脱酸后',
+                'table-light-removal': '轻组分脱除后',
+                'table-purification': '净化后',
+                'table-acid-value': '酸值 (mgKOH/g)',
+                'table-carbon-residue': '残炭 (%)',
+                'table-flash-point': '闪点 (℃)',
+                'table-note': '注：酸值和残炭越低越好；闪点和热效率越高越好',
+
+                // 经济效益
+                'economic-title': '经济效益',
+                'economic-description': '在化工行业应用中展现的显著经济和环保效益：',
+                'economic-stat1': '新油节省',
+                'economic-stat2': '停机节省',
+                'economic-stat3': '能耗降低',
+                'economic-stat4': '总计节省',
+                'economic-comparison-title': '改造前后对比',
+
+                // 改造前后对比
+                'comparison-before': '改造前',
+                'comparison-after': '改造后',
+                'comparison-impact': '经济效益',
+                'comparison1-before-label': '酸值超标',
+                'comparison1-before-desc': '高酸值显著增加结焦风险',
+                'comparison1-after-label': '无结焦',
+                'comparison1-after-desc': '酸值正常化，消除结焦问题',
+                'comparison1-impact-main': '节省40万美元换油费用',
+                'comparison1-impact-sub': '避免系统维护成本',
+                'comparison2-before-label': '残炭高',
+                'comparison2-before-desc': '积碳降低传热效率',
+                'comparison2-after-label': '无需清洗',
+                'comparison2-after-desc': '不停机有效去除残炭',
+                'comparison2-impact-main': '节省30万美元停机费用',
+                'comparison2-impact-sub': '避免维护期间的生产损失',
+                'comparison3-before-label': '热效率低',
+                'comparison3-before-desc': '系统效率低下增加能耗',
+                'comparison3-after-label': '高效率',
+                'comparison3-after-desc': '降低温差，改善传热',
+                'comparison3-impact-main': '能耗降低10-20%',
+                'comparison3-impact-sub': '显著的年度能源成本节省',
+
+                // 联系表单
+                'contact-title': '联系我们',
+                'contact-solution-title': '获取方案与报价',
+                'contact-solution-desc': '联系我们获取定制化解决方案。',
+                'contact-address': '中国广州市南沙区丰泽东路106号',
+                'contact-form-title': '发送询价',
+                'form-name-placeholder': '您的姓名',
+                'form-phone-placeholder': '联系电话',
+                'form-email-placeholder': '邮箱地址',
+                'form-message-placeholder': '您的需求',
+                'form-submit-btn': '提交询价',
+                'footer-copyright': '© 2023 版权所有',
+                'footer-slogan': '绿色生产 · 循环经济 · 可持续发展',
+
+                // 环保效益
+                'environmental-title': '环保效益',
+                'env-card1-title': '减少废油',
+                'env-card1-text': '终身免维护运行最大限度减少废油产生和不当处置风险。',
+                'env-card1-value': '减少250+吨废油',
+                'env-card2-title': '降低能耗',
+                'env-card2-text': '传热效率提升10-20%，减少燃料消耗和排放。',
+                'env-card2-value': '年减少500吨CO₂',
+                'env-card3-title': '资源循环',
+                'env-card3-text': '油品回收利用最大化资源利用率，减少新油生产的环境负担。',
+                'env-card3-value': '95%资源利用率',
+                'env-card4-title': '绿色生产',
+                'env-card4-text': '支持可持续制造',
+                'env-certification-title': '支持绿色工厂认证',
+                'env-certification-desc': '我们的解决方案符合国家绿色制造标准和环保政策：',
+                'env-benefit1': '满足工业油品环保合规要求',
+                'env-benefit2': '降低危废处置成本和环境风险',
+                'env-benefit3': '提升绿色制造资质和市场竞争力',
+                'env-benefit4': '助力碳中和目标和国家气候战略',
+
+                // 实施计划
+                'implementation-title': '实施计划',
+                'impl-step1-title': '评估测试',
+                'impl-step1-desc': '对油样进行环保测试和实验，制定定制化绿色修复方案。',
+                'impl-step1-duration': '周期：1周',
+                'impl-step2-title': '设备定制',
+                'impl-step2-desc': '设计符合环保标准的低能耗、零排放净化设备。',
+                'impl-step2-duration': '周期：3-4周',
+                'impl-step3-title': '安装调试',
+                'impl-step3-desc': '零污染专业安装，系统集成和环保性能测试。',
+                'impl-step3-duration': '周期：3-5天（不停机）',
+                'impl-step4-title': '维护服务',
+                'impl-step4-desc': '提供环保监测、能效评估和维护，确保最佳性能。',
+                'impl-step4-duration': '周期：终身服务',
+                'impl-cta': '申请方案详情',
+
+                // 表单验证消息
+                'form-validation-error': '请输入您的姓名和联系电话',
+                'form-success-message': '邮件客户端已打开并预填询价模板。请发送邮件完成您的询价！',
+
+                // 案例研究
+                'cases-title': '客户应用',
+                'cases-industry-title': '行业应用',
+                'cases-studies-title': '案例研究',
+
+                // 行业应用
+                'industry1-title': '塑料与纤维',
+                'industry1-app1': '反应釜',
+                'industry1-app2': '精馏塔',
+                'industry2-title': '化工与石化',
+                'industry2-app1': '反应器',
+                'industry2-app2': '蒸馏塔',
+                'industry3-title': '纺织',
+                'industry3-app1': '纤维熔融',
+                'industry3-app2': '板材压制',
+                'industry4-title': '新能源材料',
+                'industry4-app1': '多晶硅生长',
+                'industry4-app2': '电池电极干燥',
+                'industry5-title': '食品与制药',
+                'industry5-app1': '烘焙设备',
+                'industry5-app2': '无菌干燥',
+                'industry6-title': '建筑材料',
+                'industry6-app1': '沥青熔融',
+                'industry6-app2': '石膏板干燥',
+                'industry7-title': '造纸与纺织',
+                'industry7-app1': '热定型',
+                'industry7-app2': '纸张干燥',
+                'industry8-title': '金属加工',
+                'industry8-app1': '淬火回火',
+                'industry8-app2': '脱脂电镀',
+
+                // 案例研究详情
+                'case1-title': 'PCB制造商改造',
+                'case1-problem': '某PCB制造商面临严重结焦问题，导致传热不良和次品率增加。',
+                'case-solution-label': '解决方案：',
+                'case1-solution1': '实施在线脱酸技术',
+                'case1-solution2': '安装净化系统实现免维护运行',
+                'case1-solution3': '逐步清除壁面污垢和焦炭沉积',
+                'case1-solution4': '恢复闪点、酸值和残炭指标',
+                'case2-title': '化工厂绿色转型',
+                'case2-problem': '某化工厂因200吨劣化导热油收到停产通知。',
+                'case2-solution1': '在线净化恢复油品质量',
+                'case2-solution2': '絮凝处理使酸值正常化',
+                'case2-solution3': '吸附过滤去除氧化物',
+                'case2-solution4': '在线轻组分脱除恢复闪点',
+                'case-stat-cost': '成本节省',
+                'case-stat-energy': '能耗降低',
+                'case-stat-oil': '换油次数',
+                'case-stat-waste': '废料减少',
+                'case-stat-co2': 'CO₂减排',
+
+                // 油品对比
+                'oil-comparison-title': '改造前后油品外观对比',
+                'oil-before-label': '改造前',
+                'oil-after-label': '改造后',
+                'oil-issues-title': '问题',
+                'oil-issue1': '颜色深黑，不透明',
+                'oil-issue2': '含有胶质和壁面污垢',
+                'oil-issue3': '粘度高，流动性差',
+                'oil-improvements-title': '改善',
+                'oil-improvement1': '颜色透明，如新油',
+                'oil-improvement2': '无胶质和悬浮物',
+                'oil-improvement3': '粘度正常，流动性好',
+                'oil-note': '注：图片仅供说明；实际效果可能有所不同'
             }
         };
 
-        // 当前语言
-        let currentLanguage = localStorage.getItem('language') || 'en';
+        // 检测浏览器语言并设置默认语言
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+
+            // 根据浏览器语言设置默认语言
+            if (browserLang.startsWith('zh')) {
+                return 'zh'; // 中文
+            } else if (browserLang.startsWith('ru')) {
+                return 'ru'; // 俄语
+            } else {
+                return 'en'; // 默认英语
+            }
+        }
+
+        // 当前语言 - 优先使用本地存储，其次使用浏览器检测
+        let currentLanguage = localStorage.getItem('language') || detectBrowserLanguage();
 
         // 翻译函数
         function translatePage(language) {
@@ -1863,7 +2244,17 @@
             if (button) {
                 const flag = button.querySelector('.flag');
                 if (flag) {
-                    flag.textContent = language === 'ru' ? '🇷🇺' : '🇺🇸';
+                    // 根据语言设置对应的国旗
+                    switch(language) {
+                        case 'zh':
+                            flag.textContent = '🇨🇳';
+                            break;
+                        case 'ru':
+                            flag.textContent = '🇷🇺';
+                            break;
+                        default:
+                            flag.textContent = '🇺🇸';
+                    }
                 }
             }
 
