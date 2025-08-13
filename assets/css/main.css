@@ -126,3 +126,52 @@ p {
     color: #666 !important;
     opacity: 1;
 }
+
+/* Language-specific styles */
+/* Hide contact form for Chinese language */
+html[lang="zh"] #contact form {
+    display: none !important;
+}
+
+/* Hide form title for Chinese language */
+html[lang="zh"] #contact h3[data-translate="contact-form-title"] {
+    display: none !important;
+}
+
+/* Hide the entire form section (right column) for Chinese language */
+html[lang="zh"] #contact .grid > div:nth-child(2) {
+    display: none !important;
+}
+
+/* Adjust contact section layout when form is hidden */
+html[lang="zh"] #contact .grid {
+    grid-template-columns: 1fr;
+}
+
+html[lang="zh"] #contact .grid > div:first-child {
+    max-width: none;
+    text-align: center;
+}
+
+/* Fix timeline layout for Chinese language */
+html[lang="zh"] #implementation .relative.pl-8 {
+    padding-left: 1.5rem;
+}
+
+html[lang="zh"] #implementation .absolute.left-3 {
+    left: 0.5rem;
+}
+
+/* Target the timeline dots specifically */
+html[lang="zh"] #implementation .relative > .absolute.w-7.h-7 {
+    left: -1rem !important;
+}
+
+html[lang="zh"] #implementation .ml-6 {
+    margin-left: 1.25rem;
+}
+
+/* Ensure proper spacing for timeline content */
+html[lang="zh"] #implementation .bg-lightGreen {
+    margin-left: 0.75rem;
+}
