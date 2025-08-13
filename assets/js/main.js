@@ -1,71 +1,24 @@
 // Import translations
-import { translations } from './translations.js';
+import { translatePage, getCurrentLanguage, setCurrentLanguage, initializeTranslations } from './translations.js';
 
 (function() {
     'use strict';
 
     // ===========================================
-    // TRANSLATIONS MODULE
+    // LANGUAGE CHANGE HANDLER
     // ===========================================
-
-    // Current language state
-    let currentLanguage = 'en';
-
-    // Browser language detection
-    function detectBrowserLanguage() {
-        const browserLang = navigator.language;
-        if (browserLang && browserLang.startsWith('zh')) return 'zh';
-        if (browserLang && browserLang.startsWith('ru')) return 'ru';
-        return 'en';
-    }
-
-    // Translation function
-    function translatePage(language) {
-        if (!translations[language]) {
-            console.warn(`Language ${language} not found, falling back to English`);
-            language = 'en';
-        }
-
-        // Update text content elements
-        const elements = document.querySelectorAll('[data-translate]');
-        elements.forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (key && translations[language] && translations[language][key]) {
-                if (element.hasAttribute('data-translate-attr')) {
-                    const attr = element.getAttribute('data-translate-attr');
-                    if (attr) {
-                        element.setAttribute(attr, translations[language][key]);
-                    }
-                } else {
-                    element.textContent = translations[language][key];
-                }
-            }
-        });
-
-        // Update placeholder elements
-        const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
-        placeholderElements.forEach(element => {
-            const key = element.getAttribute('data-translate-placeholder');
-            if (key && translations[language] && translations[language][key]) {
-                element.setAttribute('placeholder', translations[language][key]);
-            }
-        });
-
-        currentLanguage = language;
-        localStorage.setItem('preferredLanguage', language);
-        
-        // Update language switcher
-        updateLanguageSwitcher(language);
-    }
 
     // Change language function
     function changeLanguage(language) {
+        setCurrentLanguage(language);
         translatePage(language);
-        
+        updateLanguageSwitcher(language);
+
         // Close dropdown after selection
         const dropdown = document.getElementById('languageDropdown');
         if (dropdown) {
             dropdown.classList.add('hidden');
+            dropdown.classList.remove('show');
             isDropdownOpen = false;
         }
     }
@@ -113,7 +66,14 @@ import { translations } from './translations.js';
         if (!dropdown) return;
 
         isDropdownOpen = !isDropdownOpen;
-        dropdown.classList.toggle('hidden', !isDropdownOpen);
+
+        if (isDropdownOpen) {
+            dropdown.classList.remove('hidden');
+            dropdown.classList.add('show');
+        } else {
+            dropdown.classList.add('hidden');
+            dropdown.classList.remove('show');
+        }
     }
 
     // ===========================================
@@ -132,11 +92,7 @@ import { translations } from './translations.js';
 
         // Validation
         if (!name || !phone) {
-            const errorKey = 'form-validation-error';
-            const errorMessage = translations[currentLanguage] && translations[currentLanguage][errorKey] 
-                ? translations[currentLanguage][errorKey] 
-                : 'Please enter your name and contact phone number';
-            alert(errorMessage);
+            alert('Please enter your name and contact phone number');
             return;
         }
 
@@ -156,11 +112,7 @@ Please provide more information about your heat transfer oil system retrofit sol
         window.location.href = mailtoLink;
 
         // Show success message
-        const successKey = 'form-success-message';
-        const successMessage = translations[currentLanguage] && translations[currentLanguage][successKey]
-            ? translations[currentLanguage][successKey]
-            : 'Email client has been opened with pre-filled inquiry template. Please send the email to complete your inquiry!';
-        alert(successMessage);
+        alert('Email client has been opened with pre-filled inquiry template. Please send the email to complete your inquiry!');
     }
 
     // ===========================================
@@ -239,9 +191,8 @@ Please provide more information about your heat transfer oil system retrofit sol
     async function initializeApp() {
         console.log('Initializing Heat Transfer Oil App...');
 
-        // Detect and set initial language
-        const savedLanguage = localStorage.getItem('preferredLanguage');
-        const initialLanguage = savedLanguage || detectBrowserLanguage();
+        // Initialize translations first
+        const initialLanguage = await initializeTranslations();
         
         // Initialize all modules
         initSmoothScrolling();
@@ -279,12 +230,13 @@ Please provide more information about your heat transfer oil system retrofit sol
             if (languageButton && dropdown && target instanceof Node &&
                 !languageButton.contains(target) && !dropdown.contains(target)) {
                 dropdown.classList.add('hidden');
+                dropdown.classList.remove('show');
                 isDropdownOpen = false;
             }
         });
 
-        // Apply initial translation
-        translatePage(initialLanguage);
+        // Update language switcher with initial language
+        updateLanguageSwitcher(initialLanguage);
         
         console.log('Heat Transfer Oil App initialized successfully');
     }
