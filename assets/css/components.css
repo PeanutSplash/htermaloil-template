@@ -73,6 +73,18 @@
 .language-option .flag {
     margin-right: 8px;
     font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-option .flag svg,
+.language-button .flag svg {
+    width: 20px;
+    height: auto;
+    max-height: 15px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .language-option span:last-child {

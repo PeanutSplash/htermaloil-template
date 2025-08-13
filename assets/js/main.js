@@ -29,9 +29,41 @@ import { translatePage, getCurrentLanguage, setCurrentLanguage, initializeTransl
     
     let isDropdownOpen = false;
     const languageConfig = {
-        'en': { flag: '🇺🇸', name: 'English' },
-        'ru': { flag: '🇷🇺', name: 'Русский' },
-        'zh': { flag: '🇨🇳', name: '中文' }
+        'en': {
+            flag: `<svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="15" fill="#B22234"/>
+                <rect width="20" height="1.15" fill="white"/>
+                <rect y="2.31" width="20" height="1.15" fill="white"/>
+                <rect y="4.62" width="20" height="1.15" fill="white"/>
+                <rect y="6.92" width="20" height="1.15" fill="white"/>
+                <rect y="9.23" width="20" height="1.15" fill="white"/>
+                <rect y="11.54" width="20" height="1.15" fill="white"/>
+                <rect y="13.85" width="20" height="1.15" fill="white"/>
+                <rect width="8" height="8.08" fill="#3C3B6E"/>
+            </svg>`,
+            name: 'English'
+        },
+        'ru': {
+            flag: `<svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="5" fill="white"/>
+                <rect y="5" width="20" height="5" fill="#0039A6"/>
+                <rect y="10" width="20" height="5" fill="#D52B1E"/>
+            </svg>`,
+            name: 'Русский'
+        },
+        'zh': {
+            flag: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="13.33" viewBox="0 0 900 600">
+                <path fill="#EE1C25" d="M0 0h900v600H0"/>
+                <g transform="matrix(3 0 0 3 150 150)">
+                    <path id="a" d="m0-30 17.634 54.27-46.166-33.54h57.064l-46.166 33.54Z" fill="#FF0"/>
+                </g>
+                <use xlink:href="#a" transform="rotate(23.036 2.784 766.082)"/>
+                <use xlink:href="#a" transform="rotate(45.87 38.201 485.396)"/>
+                <use xlink:href="#a" transform="rotate(69.945 29.892 362.328)"/>
+                <use xlink:href="#a" transform="rotate(20.66 -590.66 957.955)"/>
+            </svg>`,
+            name: '中文'
+        }
     };
 
     function updateLanguageSwitcher(language) {
@@ -45,7 +77,7 @@ import { translatePage, getCurrentLanguage, setCurrentLanguage, initializeTransl
             // Update button flag
             const flagSpan = button.querySelector('.flag');
             if (flagSpan) {
-                flagSpan.textContent = config.flag;
+                flagSpan.innerHTML = config.flag;
             }
         }
 
