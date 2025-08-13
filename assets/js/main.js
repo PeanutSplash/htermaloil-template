@@ -128,6 +128,9 @@ import { translatePage, getCurrentLanguage, setCurrentLanguage, initializeTransl
             return;
         }
 
+        // Get target email from site config
+        const targetEmail = window.siteConfig?.contact?.email || 'Peter.choy.wong@outlook.com';
+
         // Create email content
         const subject = encodeURIComponent('Heat Transfer Oil System Inquiry');
         const body = encodeURIComponent(`
@@ -140,7 +143,7 @@ Please provide more information about your heat transfer oil system retrofit sol
         `);
 
         // Open email client
-        const mailtoLink = `mailto:info@example.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
         window.location.href = mailtoLink;
 
         // Show success message
@@ -217,15 +220,49 @@ Please provide more information about your heat transfer oil system retrofit sol
     }
 
     // ===========================================
+    // SITE CONFIGURATION MODULE
+    // ===========================================
+
+    async function initializeSiteConfig() {
+        try {
+            // 动态导入配置模块
+            const { getCurrentConfig, applyConfig } = await import('../../config/site-configs.js');
+
+            // 获取当前配置
+            const config = getCurrentConfig();
+
+            // 应用配置到页面
+            applyConfig(config);
+
+            // 存储配置供其他模块使用
+            window.siteConfig = config;
+
+            console.log('Site configuration loaded:', config);
+        } catch (error) {
+            console.warn('Failed to load site configuration, using defaults:', error);
+            // 如果配置加载失败，使用默认值
+            window.siteConfig = {
+                contact: {
+                    phone: '+86 132 4287 7076',
+                    email: 'Peter.choy.wong@outlook.com'
+                }
+            };
+        }
+    }
+
+    // ===========================================
     // INITIALIZATION MODULE
     // ===========================================
     
     async function initializeApp() {
         console.log('Initializing Heat Transfer Oil App...');
 
-        // Initialize translations first
+        // Initialize site configuration first
+        await initializeSiteConfig();
+
+        // Initialize translations
         const initialLanguage = await initializeTranslations();
-        
+
         // Initialize all modules
         initSmoothScrolling();
         initMobileMenu();
