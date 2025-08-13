@@ -28,22 +28,24 @@ export default defineConfig({
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          
-          if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name)) {
-            return `assets/media/[name]-[hash].${ext}`;
+          const fileName = assetInfo.names?.[0] || assetInfo.name || '';
+
+          if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(fileName)) {
+            return `assets/media/[name]-[hash][extname]`;
           }
-          if (/\.(png|jpe?g|gif|svg|webp|avif)(\?.*)?$/i.test(assetInfo.name)) {
-            return `assets/images/[name]-[hash].${ext}`;
+          if (/\.(png|jpe?g|gif|svg|webp|avif)(\?.*)?$/i.test(fileName)) {
+            return `assets/images/[name]-[hash][extname]`;
           }
-          if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name)) {
-            return `assets/fonts/[name]-[hash].${ext}`;
+          if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(fileName)) {
+            return `assets/fonts/[name]-[hash][extname]`;
           }
-          if (/\.css$/i.test(assetInfo.name)) {
-            return `assets/css/[name]-[hash].${ext}`;
+          if (/\.css$/i.test(fileName)) {
+            return `assets/css/[name]-[hash][extname]`;
           }
-          return `assets/[name]-[hash].${ext}`;
+          if (/\.json$/i.test(fileName)) {
+            return `assets/js/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
         },
       },
     },
@@ -143,13 +145,13 @@ export default defineConfig({
     // }),
 
     // 构建分析插件（仅在分析模式下启用）
-    process.env.ANALYZE && visualizer({
+    ...(process.env.ANALYZE ? [visualizer({
       filename: 'dist/stats.html',
       open: true,
       gzipSize: true,
       brotliSize: true,
-    }),
-  ].filter(Boolean),
+    })] : []),
+  ],
   
   // CSS配置
   css: {
@@ -161,5 +163,8 @@ export default defineConfig({
   },
   
   // 静态资源处理
-  assetsInclude: ['**/*.xml', '**/*.txt'],
+  assetsInclude: ['**/*.xml', '**/*.txt', '**/*.json'],
+
+  // 公共文件处理
+  publicDir: 'public',
 });
