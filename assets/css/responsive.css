@@ -108,36 +108,144 @@
     .scroll-indicator {
         display: flex;
     }
-    
+
     .language-switcher {
         top: 15px;
         right: 70px; /* Move to left of menu button to avoid overlap */
         transition: all 0.3s ease;
     }
-    
+
     .language-button {
         width: 40px;
         height: 40px;
         font-size: 16px;
     }
-    
+
     /* When mobile menu is open, adjust language selector position */
     .mobile-menu-open .language-switcher {
         top: 80px; /* Move below navigation bar */
         right: 15px;
         z-index: 1001; /* Ensure it's above menu */
     }
-    
+
     /* Adjust dropdown display when mobile menu is open */
     .mobile-menu-open .language-dropdown {
         top: 100%;
         right: 0;
         margin-top: 5px;
     }
-    
+
     /* Hide tooltip text on mobile */
     .language-button::after {
         display: none;
+    }
+
+    /* Mobile menu styles */
+    #mobileMenu {
+        transition: all 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #mobileMenu:not(.hidden) {
+        max-height: 400px;
+        overflow: visible;
+    }
+
+    /* Mobile menu links */
+    #mobileMenu a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+    }
+
+    #mobileMenu a:last-child {
+        border-bottom: none;
+    }
+
+    #mobileMenu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 8px;
+    }
+
+    /* Mobile menu button animation */
+    #mobileMenuButton {
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    #mobileMenuButton:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #mobileMenuButton i {
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-open #mobileMenuButton {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Prevent body scroll when mobile menu is open */
+    .mobile-menu-open {
+        overflow: hidden;
+    }
+
+    /* Ensure mobile menu button is visible and properly positioned */
+    nav .container {
+        position: relative;
+    }
+
+    /* Improve mobile navigation layout */
+    nav .flex.justify-between {
+        align-items: center;
+        min-height: 60px;
+    }
+
+    /* Brand text responsive sizing */
+    nav .font-bold {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    /* Mobile menu container improvements */
+    #mobileMenu .container {
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .language-switcher {
+        top: 12px;
+        right: 60px;
+    }
+
+    .language-button {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    nav .font-bold {
+        font-size: 0.9rem;
+    }
+
+    nav .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #mobileMenuButton {
+        padding: 8px;
+    }
+
+    #mobileMenu a {
+        padding: 10px 0;
+        font-size: 0.95rem;
     }
 }
 

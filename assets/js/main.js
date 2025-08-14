@@ -172,14 +172,53 @@ Please provide more information about your heat transfer oil system retrofit sol
     // ===========================================
     // MOBILE MENU MODULE
     // ===========================================
-    
+
     function initMobileMenu() {
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');
-        
+
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
+                const isHidden = mobileMenu.classList.contains('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                    // Change icon to X
+                    if (icon) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                    // Add class to body to indicate mobile menu is open
+                    document.body.classList.add('mobile-menu-open');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    // Change icon back to bars
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    // Remove class from body
+                    document.body.classList.remove('mobile-menu-open');
+                }
+            });
+
+            // Close mobile menu when clicking on menu items
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const icon = mobileMenuButton.querySelector('i');
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    // Change icon back to bars
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    document.body.classList.remove('mobile-menu-open');
+                });
             });
         }
     }
